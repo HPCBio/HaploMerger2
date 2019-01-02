@@ -1,0 +1,21 @@
+--aliFilter=5000000.
+--overhangFilter=50000.
+Finished scf fasta reading.
+Total scaffolds that suffer from misjoin: 0 .
+Total breakpoints for misjoined scaffolds: 0 .
+Finished misjoin/breaks reading.
+
+
+========== The coordinates (0-based) of the breakpoints ==========
+processing breakpoints of sc_B: intact
+processing breakpoints of sc_F: intact
+processing breakpoints of sc_C: intact
+processing breakpoints of sc_unpaired_500_2850x2_500: intact
+processing breakpoints of sc_H: intact
+processing breakpoints of sc_D: intact
+processing breakpoints of sc_E: intact
+processing breakpoints of sc_G: intact
+processing breakpoints of sc_A: intact
+
+====== Finished outputing new scf. ========
+

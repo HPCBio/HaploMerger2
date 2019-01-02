@@ -1,0 +1,53 @@
+
+
+========== Start at 2016年 11月 30日 星期三 17:23:31 CST
+../bin/HM_pathFinder.pl --Species genome genomex --Force --Delete --scoreScheme=score --filter=200000 --NsLCsFilter=90 --noSelfLoop=1 --noStrandConflict=1 --breakingMode=2 --misjoin_aliFilter=5000000 --misjoin_overhangFilter=50000 --escapeFilter=100
+
+Species included:  genome genomex 
+Set the scoring scheme to score, and set the filter score/ali_len to 200000.
+Set the breakingMode to 2,
+and set the misjoin_aliFilter to 5000000,
+and set the misjoin_overhangFilter to 50000.
+--noSelfLoop is set to  1 !
+--noStrandConflict is set to 1 !
+Set to OVER-WRITING mode!
+Finished reading the original data files.
+Deleted 0 self-self nontrivial nodes (-17).
+Deleted 2 low-scored nodes (-2) (minimum score/ali_len =  200000 ).
+0 nodes escape low-score filtering (threshold = 100 %).
+Deleted 0 trivial nodes (stringent) (--minLen*4 =  5 ) (=-11).
+Deleted 0 nodes mainly consisting of Ns and lowcases (-3) (>90%).
+Finished seeking self_loops in perfect_path_finding (0, -6) 
+and chaining adjacent nodes (0) from same target query scaffolds!
+Also delete 0 nodes (-5) with strand conflict with the mainstream.
+Break 0 assembly mis-joining points (-8).
+Deleted 2 trivial nodes (less stringent) (--minLen*2 =  2.5 ) (=-11).
+Total self_loops are 0 (-6).
+Total strand switchs are 0 nodes (-5).
+Deleted 2 loops (=node count, -7).
+Deleted 2 switch loops (=node count, -8).
+Deleted totally 2 trivial nodes (relax) (--minLen*1 =  1.25 ) (<=-11).
+Nodes with no adjacent nodes: 6 .
+Nodes with 1  adjacent nodes: 4 .
+Nodes with 2  adjacent nodes: 2 .
+Nodes with 3  adjacent nodes: 0 .
+Nodes with 4  adjacent nodes: 0 .
+There are  12  informative nodes left .
+Break 12 branches (including mirror paths).
+There are  6  paths (with mirror) !
+There are  3  paths (without mirror) !
+Finished path_terminal_extending!
+Finished new_scaffold traversing!
+Finished ouput new_scaffolds to genome.genomex.result/hm.new_scaffolds!
+Finished ouput potential assembly errors (mis_joins) to genome.genomex.result/hm.assembly_errors!
+Finished output unpaired scaffolds and scaffold portions.
+
+The raw haplome size is 63400 bp;
+the raw haplome scaffold N50 number is 2;
+the raw haplome scaffold N50 size is 26200 bp;
+the raw size of unpaired scaffolds is 6776 bp;
+the raw size of unpaired scaffold portions is 0 bp.
+
+
+========== Time used = 	0	 seconds or 	0	 hours.
+

@@ -1,0 +1,210 @@
+/db3/HaploMerger2_20161129/bin:/db3/HaploMerger2_20161129/chainNet_jksrc20100603_centOS6:/db3/HaploMerger2_20161129/lastz_1.02.00_centOS6:/db3/HaploMerger2_20161129/gapCloser_v1.12:/db3/HaploMerger2_20161129/SSPACE-STANDARD-3.0_linux-x86_64:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/hsf/.local/bin:/home/hsf/bin
+
+>>> Running command : ./hm.batchA1.initiation_and_all_lastz genome
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+These files/directories are going to be output :
+  genomex.fa.gz - a copy of the genome sequence file genome.fa(.gz)
+  genome.sizes - the size of each scaffold sequences
+  genomex.sizes - the size of each scaffold sequences
+  genome.seq/*.fa and *.nib - fasta files and nib files for scaffold sequences
+  genomex.seq/*.fa and *.nib - fasta files and nib files for scaffold sequences
+  *** genome.genomex.result/raw.axt/*.axt, *.axt.*, and *.log - raw lastz result files and their log files
+log files:
+  _A1.initiation.log - log file
+  _A1.all_lastz.log - log file
+
+
+>>> Running command : ./hm.batchA2.chainNet_and_netToMaf genome
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+These files/directories are going to be output :
+  genome.genomex.result/all.chain.gz - raw chain file, gzip compressed
+  genome.genomex.result/all.tbest.chain.gz - target-best chain file
+  genome.genomex.result/all.tbest.net - target-best net file
+  *** genome.genomex.result/all.rbest.chain.gz - reciprocal best chain file, gzip compressed
+  *** genome.genomex.result/all.rbest.net.gz - reciprocal best net file, gzip compressed
+  *** genome.genomex.result/zeroMinSpace.rbest.net.gz - the zeroMinSpace net file
+log files:
+  genome.genomex.result/*.log - log files for HM_axtChainRecipBestNet.pl
+  _A2.axtChainRecipBestNet.log - log file
+
+*** NOTE THAT you may delete the directory
+*** genome.genomex.result/raw.axt after having sucessfully finished this script!
+
+
+***********************************************************************************
+*** NOTE THAT if this script finished sucessfully, you can delete the directory 
+*** genome.genomex.result/raw.axt to save tens of gigabases' disk space !
+***********************************************************************************
+
+
+>>> Running command : ./hm.batchA3.misjoin_processing genome
+
+These files/directories are going to be output :
+from HM_pathFinder_preparation.pl :
+  genome.genomex.result/hm.scaffolds - information of original scaffolds
+  genome.genomex.result/hm.nodes - information of the alignment blocks (a block is a node)
+  genome.genomex.result/hm.portions - information of the partions of original scaffolds
+from HM_pathFinder.pl :
+  *** genome.genomex.result/hm.new_scaffolds - the solved relations between two haplotypic scaffolds
+  *** genome.genomex.result/hm.assembly_errors - potential assembly errors in the original assembly
+  genome.genomex.result/hm.unpaired - a list of the unpaired scaffolds
+from XHM_remove_misjoin_scf.pl :
+  *** genome_A.fa.gz - the new diploid scaffolds with misjoins removed
+log files:
+  _A3.pathFinder_preparation.log
+  _A3.pathFinder.log
+  _A3.misjoin_processing.log
+
+
+>>> Running command : ./hm.batchB1.initiation_and_all_lastz genome_A
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+These files/directories are going to be output :
+  genome_Ax.fa.gz - a copy of the genome sequence file genome_A.fa(.gz)
+  genome_A.sizes - the size of each scaffold sequences
+  genome_Ax.sizes - the size of each scaffold sequences
+  genome_A.seq/*.fa and *.nib - fasta files and nib files for scaffold sequences
+  genome_Ax.seq/*.fa and *.nib - fasta files and nib files for scaffold sequences
+  *** genome_A.genome_Ax.result/raw.axt/*.axt, *.axt.*, and *.log - raw lastz result files and their log files
+log files:
+  _B1.initiation.log - log file
+  _B1.all_lastz.log - log file
+
+
+>>> Running command : ./hm.batchB2.chainNet_and_netToMaf genome_A
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+These files/directories are going to be output :
+  genome_A.genome_Ax.result/all.chain.gz - raw chain file, gzip compressed
+  genome_A.genome_Ax.result/all.tbest.chain.gz - target-best chain file
+  genome_A.genome_Ax.result/all.tbest.net - target-best net file
+  *** genome_A.genome_Ax.result/all.rbest.chain.gz - reciprocal best chain file, gzip compressed
+  *** genome_A.genome_Ax.result/all.rbest.net.gz - reciprocal best net file, gzip compressed
+  *** genome_A.genome_Ax.result/zeroMinSpace.rbest.net.gz - the zeroMinSpace net file
+  *** genome_A.genome_Ax.result/mafFiltered.net.gz - the net file for mafFiltered.net.maf.gz
+  *** genome_A.genome_Ax.result/mafFiltered.net.maf.gz - maf alignments, all scaffolds in one file, deleted
+  *** genome_A.genome_Ax.result/mafFiltered.net.maf.tar.gz - maf alignments, one file per scaffold, for viewing
+log files:
+  genome_A.genome_Ax.result/*.log - log files for HM_axtChainRecipBestNet.pl
+  _B2.axtChainRecipBestNet.log - log file
+  _B2.netToMaf.log - log file
+
+*** NOTE THAT you may delete the directory
+*** genome_A.genome_Ax.result/raw.axt after having sucessfully finished this script!
+
+
+***********************************************************************************
+*** NOTE THAT if this script finished sucessfully, you can delete the directory 
+*** genome_A.genome_Ax.result/raw.axt to save tens of gigabases' disk space !
+***********************************************************************************
+
+
+>>> Running command : ./hm.batchB3.haplomerger genome_A
+
+These files/directories are going to be output :
+from HM_pathFinder_preparation.pl :
+  genome_A.genome_Ax.result/hm.scaffolds - information of original scaffolds
+  genome_A.genome_Ax.result/hm.nodes - information of the alignment blocks (a block is a node)
+  genome_A.genome_Ax.result/hm.portions - information of the partions of original scaffolds
+from HM_pathFinder.pl :
+  *** genome_A.genome_Ax.result/hm.new_scaffolds - the solved relations between two haplotypic scaffolds
+  *** genome_A.genome_Ax.result/hm.assembly_errors - potential assembly errors in the original assembly
+  genome_A.genome_Ax.result/hm.unpaired - a list of the unpaired scaffolds
+from XHM_haploMerger.pl :
+  genome_A.genome_Ax.result/hm.connections - the alignment blocks connecting two different scaffolds
+  genome_A.genome_Ax.result/hm.unpaired_updated - an updated list of the unpaired scaffolds
+  genome_A.genome_Ax.result/assembly_hapA/B.fa.gz - original scaffold sequences separated for two haplotypes
+  *** genome_A.genome_Ax.result/optiNewScaffolds.fa.gz - new primary/reference haploid assembly
+  *** genome_A.genome_Ax.result/optiNewScaffolds_alt.fa.gz - new alternative haploid assembly
+  *** genome_A.genome_Ax.result/unpaired.fa.gz - sequences failed to be incorporated into new scaffolds
+log files:
+  _B3.pathFinder_preparation.log
+  _B3.pathFinder.log
+  _B3.haploMerger.log (include a list of the sizes of scaffolds from optiNewScaffolds.fa.gz)
+
+
+>>> Running command : ./hm.batchB4.refine_unpaired_sequences genome_A
+
+These files/directories are going to be output :
+  optiNewScaffolds.seq (will be deleted)
+  unpaired.seq (will be deleted)
+  unpaired.optiNewScaffolds.result (will be deleted)
+  genome_A.genome_Ax.result/unpaired.tbest.net - net file for unpaired sequences
+  *** genome_A.genome_Ax.result/unpaired_refined.fa.gz - updated unpaired sequences
+log files:
+  _B4.un_initiation.log, _B.un_all_lastz.log, _B.un_axtChainRecipBestNet.log
+  _B4.unincorpRefiner.log
+
+
+>>> Running command : ./hm.batchB5.merge_paired_and_unpaired_sequences genome_A
+
+These files/directories are going to be output :
+  *** genome_A_ref.fa.gz - the reference haploid assembly   (unpaired_refined included)
+  *** genome_A_alt.fa.gz - the alternative haploid assembly (unpaired_refined included)
+log files:
+  _B5.merge_paired_and_unpaired.log
+
+
+>>> Running command : ./hm.batchD1.initiation_and_all_lastz genome_A_ref
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+These files/directories are going to be output :
+  genome_A_refx.fa.gz - a copy of the genome sequence file genome_A_ref.fa(.gz)
+  genome_A_ref.sizes - the size of each scaffold sequences
+  genome_A_refx.sizes - the size of each scaffold sequences
+  genome_A_ref.seq/*.fa and *.nib - fasta files and nib files for scaffold sequences
+  genome_A_refx.seq/*.fa and *.nib - fasta files and nib files for scaffold sequences
+  *** genome_A_ref.genome_A_refx.result/raw.axt/*.axt, *.axt.*, and *.log - raw lastz result files and their log files
+log files:
+  _D1.initiation.log - log file
+  _D1.all_lastz.log - log file
+
+
+>>> Running command : ./hm.batchD2.chainNet_and_netToMaf genome_A_ref
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+These files/directories are going to be output :
+  genome_A_ref.genome_A_refx.result/all.chain.gz - raw chain file, gzip compressed
+  *** genome_A_ref.genome_A_refx.result/all.rbest.chain.gz - reciprocal best chain file, gzip compressed
+  *** genome_A_ref.genome_A_refx.result/all.rbest.net.gz - reciprocal best net file, gzip compressed
+log files:
+  genome_A_ref.genome_A_refx.result/*.log - log files for HM_axtChainRecipBestNet.pl
+  _D2.axtChainRecipBestNet.log - log file
+
+*** NOTE THAT you may delete the directory
+*** genome_A_ref.genome_A_refx.result/raw.axt after having sucessfully finished this script!
+
+
+***********************************************************************************
+*** NOTE THAT if this script finished sucessfully, you can delete the directory 
+*** genome_A_ref.genome_A_refx.result/raw.axt to save tens of gigabases' disk space !
+***********************************************************************************
+
+
+>>> Running command : ./hm.batchD3.remove_tandem_assemblies genome_A_ref
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+These files/directories are going to be output :
+  genome_A_ref.genome_A_refx.result/selfOnly.nets/*.net - store the self-self notrivial net files (deletable)
+  genome_A_ref.genome_A_refx.result/hm.tandem_assemblies - show tandem positions
+  *** genome_A_ref_D.fa.gz - the new haploid genome assembly withf tandem mis-assemblies removed
+ log files:
+  _D3.tandem_removal.log (including the info of removed seqeunces)
+  _D3.tandem_removal_excised_seq.fa (including the excised sequences)
+

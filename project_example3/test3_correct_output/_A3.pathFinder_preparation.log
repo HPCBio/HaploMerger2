@@ -1,0 +1,35 @@
+
+
+========== Start at 2016年 11月 30日 星期三 17:19:37 CST
+../bin/HM_pathFinder_preparation.pl --Species bbv18wm bbv18wmx --scoreScheme=score --filter=100000 --Force --Delete
+
+Species included:  bbv18wm bbv18wmx 
+Set the scoring scheme to score, and set the filter score/ali_len to 100000 .
+Set to OVER-WRITING mode!
+Set to DELETING mode!
+Produce tsc/qsc_ids, total id are 10354 !
+Read the zeroMinSpace.rbest.net.gz file and do some basic node filtering ...
+Total nodes are  27879 ;
+deleted nodes are 152;
+add-up score counts are 1780.
+To perform advanced node filtering and to produce the final data set of nodes ...
+27879 left before advanced filtering.
+Set filter score/ali_len to 100000 for node advanced filtering ...
+11417 low-scored nodes have been filtered (deletion status value = -2)!
+0 embeded nodes have been filtered (deletion status value = -4)!
+16462 nodes left after advanced filtering (no mirror).
+Recreate the perfect mirror alignments (nodes) ...
+15292 nodes left (with mirror).
+To produce scaffold portion data structure ...
+Cut the scaffold into portions ...
+2863 target scaffolds have no alignment hit !
+2863 query  scaffolds have no alignment hit !
+Appending infomation of Ns and lowcases to nodes ...
+Output the scaffold infomation to bbv18wm.bbv18wmx.result/hm.scaffolds.
+Output the scaffold portion infomation to bbv18wm.bbv18wmx.result/hm.sc_portions.
+Output the node (alignment block) infomation to bbv18wm.bbv18wmx.result/hm.nodes.
+Finished preparation for pathFinder.pl.
+
+
+========== Time used = 	31	 seconds or 	0.00861111111111111	 hours.
+

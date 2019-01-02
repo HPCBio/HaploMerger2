@@ -1,0 +1,14 @@
+#### You may open this file in excel.
+
+#### This table is not intended to be manually edited.
+
+#tsc_id	scaffold_name	size	start_of_node_id	end_of_node_id	is_incorporated
+0	sc_D	18450	0	3	0
+1	sc_F	17250	4	6	0
+2	sc_A	10500	7	8	0
+3	sc_B	10350	9	10	0
+4	sc_G	8800	11	13	0
+5	sc_E	7250	14	15	0
+6	sc_unpaired_500_2850x2_500	6776	-1	-1	0
+7	sc_H	6350	16	17	0
+8	sc_C	5000	18	19	0

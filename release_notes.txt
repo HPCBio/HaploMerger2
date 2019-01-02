@@ -1,0 +1,18 @@
+This release of HaploMerger2 has been tested on CentOS/RedHat v5/6 and Ubuntu v10.04-64bit.
+
+Currently, this release provides a [**tarball (HaploMerger2_20161205.tar.gz)**](https://github.com/mapleforest/HaploMerger2/releases/download/HaploMerger2_20161205/HaploMerger2_20161205.tar.gz) of binaries and executable, in which the source code also included. Please download the latest standalone HaploMerger2 package from this website and unpack it to any location you like.
+
+Requirements:
+* Perl 5.10.1+ with mulit-threading support
+* [lastz](http://www.bx.psu.edu/~rsharris/lastz/) v1.02 (included)
+* [chainNet programs(within jksrc.zip)](http://hgdownload.cse.ucsc.edu/admin/) (included) 
+* [WinMasker](https://www.ncbi.nlm.nih.gov/IEB/ToolBox/CPP_DOC/lxr/source/src/app/winmasker/) (optional)
+* [SSPACE standard v3.0](http://www.baseclear.com/genomics/bioinformatics/basetools/SSPACE/) (optional)
+
+If you like to know more about the details on requirements, installation and usages before downloading, please read [**the latest manual**](https://github.com/mapleforest/HaploMerger2/releases/download/HaploMerger2_20161205/manual.v3.4.pdf).
+
+If you like to test HaploMerger2 with a real fragmented highly-polymorphic diploid genome assembly, you may download the soft-masked (by winMasker) diploid assembly (~700Mb, 4-5% heterozygosity) of a wild-type amphioxus *Branchiostoma belcheri* [**here (bbv18wm.fa.gz)**](https://github.com/mapleforest/HaploMerger2/releases/download/HaploMerger2_20161205/bbv18wm.fa.gz). Note that this is the same genome assembly that has been submitted to NCBI under [**accession GCA_001625405.1**](https://www.ncbi.nlm.nih.gov/assembly/GCA_001625405.1). You could put this file (no need to unpack) into the directory "*HaploMerger2_20161205/project_example3/*" and then use it to test the pipeline.
+
+If you like to further test the re-scaffolding function on haploid assemblies, you may also download the 2kb, 3kb, 8kb and 20kb mate-pair libraries [**here (scaffolding_libaries.tar.gz)**](https://github.com/mapleforest/HaploMerger2/releases/download/HaploMerger2_20161205/scaffolding_libaries.tar.gz). You should unpack them to the directory "*HaploMerger2_20161205/project_example3/libraries/*" and then use them to test the pipeline.
+   
+Please feel free to contact us if you have any technical questions.

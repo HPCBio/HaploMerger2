@@ -1,0 +1,8 @@
+# You may open this file in excel.
+# This table contains scaffolds and scaffold portions that failed to be incorporated
+# into the new scaffold assebmly in the path_finding process.
+# These sequence may be used for further evaluation to see if they could be incorporated.
+# This file is not intended to be manually modified. 
+
+#scaffold_name	size	start	len	full_scaffold_or_part_of_the_scaffold
+sc_unpaired_500_2850x2_500	6776	0	6776	full	

@@ -1,0 +1,25 @@
+#### 20160901
+1. fix the chainSort command in HM_axtChainRecipBestNet.pl to avoid writing /dev/stdout error in some systems.
+
+#### 20161025
+1. fix: output the excised sequences to STDERR in XHM_tandemAssemblyRemover.pl.
+2. fix: output the excised sequences to STDERR in hm.batchD3.remove_tandem_assemblies.
+
+#### 20161129
+1. warning: for perl5.16+, install Perl4::CoreLibs (getopts.pl) to make SSPACE-STANDARD-3.0_linux-x86_64 work.
+2. XHM_tandemAssemblyRemover.pl output *_rt.fa.gz, fixed it by mv to *_D.fa.gz
+
+#### 20161130
+1. hm.batchB4.refine_unpaired_sequences: rename _hm.un*.log as _B4.un*.log
+2. many small polishing.
+
+#### 20161205
+1. re-write the readme files.
+2. Small tweeks of parameters.
+3. convert mate-pair libraries to fasta format.
+
+#### 20170222
+1. lastz_D_wrapper.pl: modified to require both min and max for the option "--identity".
+
+#### 20180514
+1. In hm.batchB3.haplomerger: 2>_B1.faDnaPolishing.log should be changed to 2>_B3.faDnaPolishing.log.

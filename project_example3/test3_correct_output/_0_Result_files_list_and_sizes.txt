@@ -1,0 +1,93 @@
+-rw-rw-r--.  1     352734  16:57 _A1.initiation.log
+-rw-rw-r--.  1      12694  17:10 _A1.all_lastz.log
+-rw-rw-r--.  1     260076  17:19 _A2.axtChainRecipBestNet.log
+-rw-rw-r--.  1     300466  17:23 _A3.faDnaPolishing.log
+-rw-rw-r--.  1       1578  17:20 _A3.pathFinder_preparation.log
+-rw-rw-r--.  1       2472  17:20 _A3.pathFinder.log
+-rw-rw-r--.  1     519964  17:23 _A3.misjoin_processing.log
+
+-rw-rw-r--.  1     356999  17:25 _B1.initiation.log
+-rw-rw-r--.  1      11094  17:36 _B1.all_lastz.log
+-rw-rw-r--.  1     205787  18:00 _B1.faDnaPolishing.log
+-rw-rw-r--.  1     271544  17:44 _B2.axtChainRecipBestNet.log
+-rw-rw-r--.  1     262930  17:47 _B2.netToMaf.log
+-rw-rw-r--.  1       1572  17:50 _B3.pathFinder_preparation.log
+-rw-rw-r--.  1       2476  17:50 _B3.pathFinder.log
+-rw-rw-r--.  1     375968  17:56 _B3.haploMerger.log
+-rw-rw-r--.  1     238959  18:02 _B4.un_initiation.log
+-rw-rw-r--.  1       2782  18:04 _B4.un_all_lastz.log
+-rw-rw-r--.  1     105116  18:07 _B4.un_axtChainRecipBestNet.log
+-rw-rw-r--.  1     520868  18:07 _B4.unincorpRefiner.log
+-rw-rw-r--.  1        174  18:07 _B5.merge_paired_and_unpaired.log
+-rw-rw-r--.  1      12869  18:28 _C1.faDnaPolishing.log
+-rw-rw-r--.  1      13356  18:28 _C1.scaffolding.log
+-rw-rw-r--.  1      25738  18:48 _C2.faDnaPolishing.log
+-rw-rw-r--.  1      90300  18:48 _C2.new_ref_and_alt_scf.log
+-rw-rw-r--.  1      21435  18:48 _D1.initiation.log
+-rw-rw-r--.  1      10995  18:53 _D1.all_lastz.log
+-rw-rw-r--.  1      22143  18:59 _D2.axtChainRecipBestNet.log
+-rw-rw-r--.  1     844623  19:02 _D3.tandem_removal.log
+-rw-rw-r--.  1    5963177  19:02 _D3.tandem_removal_excised_seq.fa
+-rw-rw-r--.  1      14910  19:27 _E1.gapcloser.log
+-rw-rw-r--.  1        891  19:29 _E1.reconstructAssembly.log
+
+-rw-r--r--.  1  230012474  22:12 bbv18wm.fa.gz
+drwxrwxr-x.  2     430080  16:57 bbv18wm.seq
+-rw-rw-r--.  1     224487  16:55 bbv18wm.sizes
+lrwxrwxrwx.  1         13  16:57 bbv18wmx.fa.gz -> bbv18wm.fa.gz
+lrwxrwxrwx.  1         11  16:57 bbv18wmx.seq -> bbv18wm.seq
+lrwxrwxrwx.  1         13  16:57 bbv18wmx.sizes -> bbv18wm.sizes
+drwxrwxr-x. 10       4096  17:20 bbv18wm.bbv18wmx.result
+
+-rw-rw-r--.  1  230086543  17:23 bbv18wm_A.fa.gz
+drwxrwxr-x.  2     471040  17:25 bbv18wm_A.seq
+-rw-rw-r--.  1     227920  17:23 bbv18wm_A.sizes
+lrwxrwxrwx.  1         15  17:25 bbv18wm_Ax.fa.gz -> bbv18wm_A.fa.gz
+lrwxrwxrwx.  1         13  17:25 bbv18wm_Ax.seq -> bbv18wm_A.seq
+lrwxrwxrwx.  1         15  17:25 bbv18wm_Ax.sizes -> bbv18wm_A.sizes
+drwxrwxr-x.  3       4096  18:07 bbv18wm_A.bbv18wm_Ax.result
+
+-rw-rw-r--.  1  132656438  18:07 bbv18wm_A_ref.fa.gz
+-rw-rw-r--.  1  124292465  18:07 bbv18wm_A_alt.fa.gz
+
+drwxrwxr-x.  6       4096  18:28 bbv18wm_A_ref.ss
+-rw-rw-r--.  1  132550145  18:46 bbv18wm_A_ref_C.fa.gz
+-rw-rw-r--.  1  124219216  18:48 bbv18wm_A_alt_C.fa.gz
+drwxrwxr-x.  2      20480  18:48 bbv18wm_A_ref_C.seq
+-rw-rw-r--.  1       9533  18:48 bbv18wm_A_ref_C.sizes
+lrwxrwxrwx.  1         21  18:48 bbv18wm_A_ref_Cx.fa.gz -> bbv18wm_A_ref_C.fa.gz
+lrwxrwxrwx.  1         19  18:48 bbv18wm_A_ref_Cx.seq -> bbv18wm_A_ref_C.seq
+lrwxrwxrwx.  1         21  18:48 bbv18wm_A_ref_Cx.sizes -> bbv18wm_A_ref_C.sizes
+drwxrwxr-x.  3       4096  19:02 bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result
+
+-rw-rw-r--.  1  127976787  19:02 bbv18wm_A_ref_C_D.fa.gz
+-rw-rw-r--.  1    2781984  19:02 bbv18wm_A_ref_C_D.agp
+
+drwxrwxr-x.  2       4096  19:27 bbv18wm_A_ref_C_D.gf
+-rw-rw-r--.  1  131620499  19:29 bbv18wm_A_ref_C_D_E.fa.gz
+-rw-rw-r--.  1    2752287  19:27 bbv18wm_A_ref_C_D_E.agp
+
+-rwxr--r--.  1       3388  10:52 hm.batchA1.initiation_and_all_lastz
+-rwxr--r--.  1       3730  10:53 hm.batchA2.chainNet_and_netToMaf
+-rwxr--r--.  1       5197  10:53 hm.batchA3.misjoin_processing
+-rwxr--r--.  1       3406  10:54 hm.batchB1.initiation_and_all_lastz
+-rwxr--r--.  1       4157  10:54 hm.batchB2.chainNet_and_netToMaf
+-rwxr--r--.  1       6886  17:02 hm.batchB3.haplomerger
+-rwxr--r--.  1       2864  17:10 hm.batchB4.refine_unpaired_sequences
+-rwxr--r--.  1       3311  10:55 hm.batchB5.merge_paired_and_unpaired_sequences
+-rwxr--r--.  1       4055  10:56 hm.batchC1.hierarchical_scaffolding
+-rwxr--r--.  1       2045  10:56 hm.batchC2.update_reference_and_alternative_assemblies
+-rwxr--r--.  1       3727  10:57 hm.batchD1.initiation_and_all_lastz
+-rwxr--r--.  1       2733  10:57 hm.batchD2.chainNet_and_netToMaf
+-rwxr--r--.  1       2991  16:48 hm.batchD3.remove_tandem_assemblies
+-rwxr--r--.  1       3255  12:51 hm.batchE1.wrapper_for_gapCloser_v1.12
+
+-rwxr--r--.  1       3118  16:49 run_all.batch
+-rw-rw-r--.  1      12669  19:03 run_all.log
+
+-rw-r--r--.  1       1981  2015  all_lastz.ctl
+-rw-r--r--.  1        119  2015  scoreMatrix.q
+
+drwxr-xr-x.  2       4096  22:15 libraries
+-rwxrwxr-x.  1       2722  2015  README.txt
+

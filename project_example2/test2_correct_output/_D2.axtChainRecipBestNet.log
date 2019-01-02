@@ -1,0 +1,46 @@
+
+
+========== Start at 2016年 11月 30日 星期三 17:23:39 CST
+../bin/HM_axtChainRecipBestNet.pl --rbestNet --axtChain --threads=1 --axtSuffix=axt.self.notrivial --linearGap=medium --minScore=25000 --minSpace=200 --minScore2=30000 --Species genome_A_ref genome_A_refx --Force --Delete
+
+Set to OVER-WRITING mode!
+Species included:  genome_A_ref genome_A_refx 
+Thread number for axtChain is set to ... 1 !
+=== axtChain start ===
+Checking missing sizes files ...
+checking nib files in genome_A_ref.seq/ ...
+checking nib files in genome_A_refx.seq/ ...
+checking chain file genome_A_ref.genome_A_refx.result/all.chain.gz ...
+Thread_ID 1:  axtChain -linearGap=medium -minScore=25000 -verbose=0  -scoreScheme=scoreMatrix.q  genome_A_ref.genome_A_refx.result/raw.axt/HM_all_lastz_target_97906_00.fa.axt.self.notrivial genome_A_ref.seq genome_A_refx.seq /dev/stdout  | chainAntiRepeat genome_A_ref.seq genome_A_refx.seq /dev/stdin genome_A_ref.genome_A_refx.result/raw.axt/HM_all_lastz_target_97906_00.fa.axt.self.notrivial.chain  
+chainMergeSort genome_A_ref.genome_A_refx.result/raw.axt/*.axt.self.notrivial.chain | gzip -c >genome_A_ref.genome_A_refx.result/all.chain.gz 
+=== axtChain done! ===
+
+=== rbestNet start ===
+--minScore2 is set to 30000.
+--minSpace is set to 200.
+Checking missing sizes files ...
+checking chain.gz files ...
+genome_A_ref.genome_A_refx.result/all.chain.gz 
+checking the net file and if present, produce the corresponding chain file ...
+checking old rbest.net/chain.gz and qrbest.net/chain.gz file ...
+creating genome_A_ref.genome_A_refx.all.tbest.net and chain ...
+gunzip -c genome_A_ref.genome_A_refx.result/all.chain.gz | chainPreNet /dev/stdin genome_A_ref.sizes genome_A_refx.sizes /dev/stdout 2>>genome_A_ref.genome_A_refx.result/_ChainPreNet.log | chainNet -minSpace=200 -minScore=30000 /dev/stdin genome_A_ref.sizes genome_A_refx.sizes /dev/stdout /dev/null 2>>genome_A_ref.genome_A_refx.result/_ChainNet.log | netSyntenic /dev/stdin genome_A_ref.genome_A_refx.result/genome_A_ref.genome_A_refx.all.tbest.net 2>>genome_A_ref.genome_A_refx.result/_netSyntenic.log 
+gunzip -c genome_A_ref.genome_A_refx.result/all.chain.gz | netChainSubset genome_A_ref.genome_A_refx.result/genome_A_ref.genome_A_refx.all.tbest.net /dev/stdin /dev/stdout 2>>genome_A_ref.genome_A_refx.result/_netChainSubset.log | chainStitchId /dev/stdin genome_A_ref.genome_A_refx.result/genome_A_ref.genome_A_refx.all.tbest.chain 2>>genome_A_ref.genome_A_refx.result/_ChainStitchId.log 
+creating all.rbest.net.gz ... 
+chainSwap genome_A_ref.genome_A_refx.result/genome_A_ref.genome_A_refx.all.tbest.chain /dev/stdout 2>>genome_A_ref.genome_A_refx.result/_ChainSwap.log| chainSort /dev/stdin genome_A_ref.genome_A_refx.result/genome_A_refx.genome_A_ref.all.tbest.chain 2>>genome_A_ref.genome_A_refx.result/_ChainSort.log 
+chainPreNet genome_A_ref.genome_A_refx.result/genome_A_refx.genome_A_ref.all.tbest.chain genome_A_refx.sizes genome_A_ref.sizes /dev/stdout 2>>genome_A_ref.genome_A_refx.result/_ChainPreNet.log | chainNet -minSpace=200 -minScore=30000 /dev/stdin genome_A_refx.sizes genome_A_ref.sizes /dev/stdout /dev/null 2>>genome_A_ref.genome_A_refx.result/_ChainNet.log | netSyntenic /dev/stdin genome_A_ref.genome_A_refx.result/genome_A_refx.genome_A_ref.all.rbest.net 2>>genome_A_ref.genome_A_refx.result/_netSyntenic.log 
+netChainSubset genome_A_ref.genome_A_refx.result/genome_A_refx.genome_A_ref.all.rbest.net genome_A_ref.genome_A_refx.result/genome_A_refx.genome_A_ref.all.tbest.chain /dev/stdout 2>>genome_A_ref.genome_A_refx.result/_netChainSubset.log | chainStitchId /dev/stdin genome_A_ref.genome_A_refx.result/genome_A_refx.genome_A_ref.all.rbest.chain 2>>genome_A_ref.genome_A_refx.result/_ChainStitchId.log 
+chainSwap genome_A_ref.genome_A_refx.result/genome_A_refx.genome_A_ref.all.rbest.chain /dev/stdout 2>>genome_A_ref.genome_A_refx.result/_ChainSwap.log | chainSort /dev/stdin genome_A_ref.genome_A_refx.result/genome_A_ref.genome_A_refx.all.rbest.chain 2>>genome_A_ref.genome_A_refx.result/_ChainSort.log 
+chainPreNet genome_A_ref.genome_A_refx.result/genome_A_ref.genome_A_refx.all.rbest.chain genome_A_ref.sizes genome_A_refx.sizes /dev/stdout 2>>genome_A_ref.genome_A_refx.result/_ChainPreNet.log | chainNet -minSpace=200 -minScore=30000 /dev/stdin genome_A_ref.sizes genome_A_refx.sizes /dev/stdout /dev/null 2>>genome_A_ref.genome_A_refx.result/_ChainNet.log | netSyntenic /dev/stdin genome_A_ref.genome_A_refx.result/genome_A_ref.genome_A_refx.all.rbest.net 2>>genome_A_ref.genome_A_refx.result/_netSyntenic.log  
+netToAxt -maxGap=99999999 genome_A_ref.genome_A_refx.result/genome_A_ref.genome_A_refx.all.rbest.net genome_A_ref.genome_A_refx.result/genome_A_ref.genome_A_refx.all.rbest.chain genome_A_ref.seq genome_A_refx.seq genome_A_ref.genome_A_refx.result/genome_A_ref.genome_A_refx.all.rbest.axt 
+axtChain -linearGap=medium -minScore=0  -verbose=0  -scoreScheme=scoreMatrix.q  genome_A_ref.genome_A_refx.result/genome_A_ref.genome_A_refx.all.rbest.axt genome_A_ref.seq genome_A_refx.seq  /dev/stdout | gzip -c > genome_A_ref.genome_A_refx.result/all.rbest.chain.gz 
+gunzip -c genome_A_ref.genome_A_refx.result/all.rbest.chain.gz | chainPreNet /dev/stdin genome_A_ref.sizes genome_A_refx.sizes /dev/stdout 2>>genome_A_ref.genome_A_refx.result/_ChainPreNet.log | chainNet -minSpace=200 -minScore=30000 /dev/stdin genome_A_ref.sizes genome_A_refx.sizes /dev/stdout /dev/null 2>>genome_A_ref.genome_A_refx.result/_ChainNet.log | netSyntenic /dev/stdin genome_A_ref.genome_A_refx.result/all.rbest.net 2>>genome_A_ref.genome_A_refx.result/_netSyntenic.log 
+reciprocal-best genome_A_ref-reference chain file genome_A_ref.genome_A_refx.result/all.rbest.chain.gz created!
+reciprocal-best genome_A_ref-reference net file genome_A_ref.genome_A_refx.result/all.rbest.net created!
+Deleting imtermediate net and chain files ... 
+=== rbestNet done! ===
+
+
+
+========== Time used =  3  seconds or  0.000833333333333333  hours.
+

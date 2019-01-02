@@ -1,0 +1,53 @@
+
+
+========== Start at 2016年 11月 30日 星期三 17:50:25 CST
+../bin/HM_pathFinder.pl --Species bbv18wm_A bbv18wm_Ax --Force --Delete --scoreScheme=score --filter=200000 --NsLCsFilter=90 --noSelfLoop=1 --noStrandConflict=1 --breakingMode=2 --misjoin_aliFilter=5000000 --misjoin_overhangFilter=50000 --escapeFilter=50
+
+Species included:  bbv18wm_A bbv18wm_Ax 
+Set the scoring scheme to score, and set the filter score/ali_len to 200000.
+Set the breakingMode to 2,
+and set the misjoin_aliFilter to 5000000,
+and set the misjoin_overhangFilter to 50000.
+--noSelfLoop is set to  1 !
+--noStrandConflict is set to 1 !
+Set to OVER-WRITING mode!
+Finished reading the original data files.
+Deleted 1844 self-self nontrivial nodes (-17).
+Deleted 6422 low-scored nodes (-2) (minimum score/ali_len =  200000 ).
+1762 nodes escape low-score filtering (threshold = 50 %).
+Deleted 72 trivial nodes (stringent) (--minLen*4 =  5 ) (=-11).
+Deleted 6 nodes mainly consisting of Ns and lowcases (-3) (>90%).
+Finished seeking self_loops in perfect_path_finding (48, -6) 
+and chaining adjacent nodes (0) from same target query scaffolds!
+Also delete 38 nodes (-5) with strand conflict with the mainstream.
+Break 4 assembly mis-joining points (-8).
+Deleted 110 trivial nodes (less stringent) (--minLen*2 =  2.5 ) (=-11).
+Total self_loops are 48 (-6).
+Total strand switchs are 38 nodes (-5).
+Deleted 0 loops (=node count, -7).
+Deleted 4 switch loops (=node count, -8).
+Deleted totally 176 trivial nodes (relax) (--minLen*1 =  1.25 ) (<=-11).
+Nodes with no adjacent nodes: 4086 .
+Nodes with 1  adjacent nodes: 4632 .
+Nodes with 2  adjacent nodes: 4862 .
+Nodes with 3  adjacent nodes: 160 .
+Nodes with 4  adjacent nodes: 0 .
+There are  13740  informative nodes left .
+Break 21712 branches (including mirror paths).
+There are  2884  paths (with mirror) !
+There are  1442  paths (without mirror) !
+Finished path_terminal_extending!
+Finished new_scaffold traversing!
+Finished ouput new_scaffolds to bbv18wm_A.bbv18wm_Ax.result/hm.new_scaffolds!
+Finished ouput potential assembly errors (mis_joins) to bbv18wm_A.bbv18wm_Ax.result/hm.assembly_errors!
+Finished output unpaired scaffolds and scaffold portions.
+
+The raw haplome size is 400163053 bp;
+the raw haplome scaffold N50 number is 124;
+the raw haplome scaffold N50 size is 889907 bp;
+the raw size of unpaired scaffolds is 13199606 bp;
+the raw size of unpaired scaffold portions is 14292680 bp.
+
+
+========== Time used = 	9	 seconds or 	0.0025	 hours.
+

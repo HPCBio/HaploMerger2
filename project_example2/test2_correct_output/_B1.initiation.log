@@ -1,0 +1,36 @@
+
+
+========== Start at 2016年 11月 30日 星期三 17:23:31 CST
+../bin/initiation.pl --faSplit --faToNib --faSize --Species genome_A --Force --Delete
+
+Set to OVER-WRITING mode!
+Species included:  genome_A 
+====faSize started!====
+checking existing sizes files ...
+====faSize done!====
+
+====faSplit started!====
+Checking existing directories ... 
+NOTE that sequence without name is not allowed in genome_A.fa.gz ! Splitting ... 
+genome_A.fa.gz has been splitted into genome_A.seq.fa/
+====faSplit done!====
+
+====faToNib started!====
+Checking existing directories ... 
+converting the fa files to nib files ...
+Converting directory genome_A.seq.fa/*.fa to genome_A.seq/*.nib ...
+Writing 10350 bases in 5183 bytes
+Writing 17250 bases in 8633 bytes
+Writing 5000 bases in 2508 bytes
+Writing 6776 bases in 3396 bytes
+Writing 6350 bases in 3183 bytes
+Writing 18450 bases in 9233 bytes
+Writing 7250 bases in 3633 bytes
+Writing 8800 bases in 4408 bytes
+Writing 10500 bases in 5258 bytes
+====faToNib done!====
+
+
+
+========== Time used =  0  seconds or  0  hours.
+

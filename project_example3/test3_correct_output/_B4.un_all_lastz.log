@@ -1,0 +1,39 @@
+
+
+========== Start at 2016年 11月 30日 星期三 18:02:15 CST
+../bin/HM_all_lastz_mThreads.pl --Species unpaired optiNewScaffolds --threads=16 --targetSize=10000000 --identity=75 --Force --Delete
+
+Set to OVER-WRITING mode!
+Set to Delete mode!
+Species included:  unpaired optiNewScaffolds 
+checking missing gz-compressed multiple-fasta files ...
+Every required files seem ok, going on ...
+
+Check existed raw.axt directory ...
+checking if unpaired.optiNewScaffolds.result/raw.axt is existing ...
+cleaning the evironment anyway ...
+Thread number is set to ... 16 !
+Target file size is ... 10000000 !
+Query file size is ... 1600000000 !
+Is_noself status is ... 0 !
+--notrivial status is ... 0 !
+--radius for notrivial function is ... 5000 !
+--unmask for covert lowcase letters to upcase letters ...  !
+go to lastz all to all step ...
+
+Finished splitting the target fasta file ...
+HM_all_lastz_target_22940_00.fa
+HM_all_lastz_target_22940_01.fa
+HM_all_lastz_target_22940_02.fa
+Finished splitting the query fasta file ...
+HM_all_lastz_query_22940_00.fa
+lastz unpaired to optiNewScaffolds ... 
+Thread_ID 1 : lastz HM_all_lastz_target_22940_00.fa[multiple] HM_all_lastz_query_22940_00.fa  --masking=254 --notrivial --hspthresh=3000 --ydrop=3400 --gappedthresh=3000 --gap=400,30 --step=20 --seed=12of19 --notransition --format=axt --markend --verbosity=1 --scores=scoreMatrix.q --identity=75  1>> unpaired.optiNewScaffolds.result/raw.axt/HM_all_lastz_target_22940_00.fa.HM_all_lastz_query_22940_00.fa.axt 2>> unpaired.optiNewScaffolds.result/raw.axt/HM_all_lastz_target_22940_00.fa.HM_all_lastz_query_22940_00.fa.log 
+Thread_ID 2 : lastz HM_all_lastz_target_22940_01.fa[multiple] HM_all_lastz_query_22940_00.fa  --masking=254 --notrivial --hspthresh=3000 --ydrop=3400 --gappedthresh=3000 --gap=400,30 --step=20 --seed=12of19 --notransition --format=axt --markend --verbosity=1 --scores=scoreMatrix.q --identity=75  1>> unpaired.optiNewScaffolds.result/raw.axt/HM_all_lastz_target_22940_01.fa.HM_all_lastz_query_22940_00.fa.axt 2>> unpaired.optiNewScaffolds.result/raw.axt/HM_all_lastz_target_22940_01.fa.HM_all_lastz_query_22940_00.fa.log 
+Thread_ID 3 : lastz HM_all_lastz_target_22940_02.fa[multiple] HM_all_lastz_query_22940_00.fa  --masking=254 --notrivial --hspthresh=3000 --ydrop=3400 --gappedthresh=3000 --gap=400,30 --step=20 --seed=12of19 --notransition --format=axt --markend --verbosity=1 --scores=scoreMatrix.q --identity=75  1>> unpaired.optiNewScaffolds.result/raw.axt/HM_all_lastz_target_22940_02.fa.HM_all_lastz_query_22940_00.fa.axt 2>> unpaired.optiNewScaffolds.result/raw.axt/HM_all_lastz_target_22940_02.fa.HM_all_lastz_query_22940_00.fa.log 
+
+Finished lastz all unpaired to all optiNewScaffolds !
+
+
+========== Time used =  119  seconds or  0.0330555555555556  hours.
+

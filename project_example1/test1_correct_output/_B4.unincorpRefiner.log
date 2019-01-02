@@ -1,0 +1,33 @@
+
+
+========== Start at 2016年 11月 30日 星期三 17:27:44 CST
+../bin/HM_unincorpRefiner.pl --Species genome genomex --runLastzChainNet=1 --threads=1 --identity=75 --maskFilter=85 --redundantFilter=85 --Force --Delete
+
+Species included:  genome genomex 
+Set to OVER-WRITING mode!
+Set to DELETING mode!
+--maskFilter is set to  85 % !
+--redundantFilter is set to  85 % !
+Finish  perl ../bin/initiation.pl --faSplit --faToNib --faSize --Species unpaired optiNewScaffolds --Force --Delete 1>_hm.un_initiation.log 2>>_hm.un_initiation.log 
+Finish  perl ../bin/HM_all_lastz_mThreads.pl --Species unpaired optiNewScaffolds  --threads=1 --targetSize=10000000 --identity=75 --Force --Delete 1>_hm.un_all_lastz.log 2>>_hm.un_all_lastz.log 
+Finish  perl ../bin/HM_axtChainRecipBestNet.pl --rbestNet --axtChain --tbest --threads=1 --linearGap=medium --minScore=10000 --minSpace=200 --minScore2=20000 --Species unpaired optiNewScaffolds  --Force --Delete 1>_hm.un_axtChainRecipBestNet.log 2>>_hm.un_axtChainRecipBestNet.log 
+Read in genome.genomex.result/hm.unpaired_updated ...
+Read in the genome.genomex.result/unpaired.tbest.net.gz file ...
+Output sequence to unpaired_refined.fa.gz ...
+
+The size of refined unpaired scaffolds is 6776 bp;
+the size of refined unpaired scaffold portions is 0 bp.
+
+
+# This table contains REFINED information of the scaffolds and scaffold portions that failed to be incorporated
+# into the new scaffold assebmly in the path_finding process.
+# and only sequences with length >=500bp were output. 
+
+#new_scaffold_name	old_scaffold_name	size	start	len	full_scaffold_or_part_of_the_scaffold	N_counts	lowcase_count	ali_len	ali_coverage	is_retained
+xfSc0000000	sc_unpaired_500_2850x2_500	6776	0	6776	full	0	0			1	
+Delete optiNewScaffolds.seq, unpaired.seq, unincorporated.optiNewScaffolds.result.
+
+
+========== Time used = 	3	 seconds or 	0.000833333333333333	 hours.
+
+n/HM_unincorpRefiner.pl line 285.

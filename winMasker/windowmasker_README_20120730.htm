@@ -1,0 +1,757 @@
+
+<!doctype html public "-//W3C//DTD HTML 3.2//EN">
+<html>
+
+<head>
+  <title>C++/src/app/winmasker/README</title>
+  <base href="http://www.ncbi.nlm.nih.gov/IEB/ToolBox/CPP_DOC/lxr/">
+  <link rel="stylesheet" type="text/css" href="http://www.ncbi.nlm.nih.gov/corehtml/ncbi.css">
+  <link rel="stylesheet" type="text/css" href="lxr.css">
+  <script type="text/javascript" src="lxr.js"></script>
+</head>
+
+<body bgcolor=white>
+
+<table border=0 width="100%">
+<tr>
+  <td class=menu align=left nowrap>
+    <a href="/">NCBI Home</a><br>
+    <a href="/IEB/">IEB Home</a><br>
+    <a href="http://www.ncbi.nlm.nih.gov/books/NBK7160/">C++ Toolkit docs</a><br>
+    <a href="/IEB/ToolBox/C_DOC/lxr/source">C Toolkit source browser</a><br>
+    <a href="http://www.ncbi.nlm.nih.gov/IEB/ToolBox/SB/hbr.html">C Toolkit source browser (2)</a><br>
+  </td>
+  <td width="55%" align="center">
+    <h1>NCBI C++ Toolkit Cross Reference</h1>
+    <h3><script type="text/javascript">SVNLocations();</script>&nbsp; <a href="source/">C++</a>/<a href="source/src/">src</a>/<a href="source/src/app/">app</a>/<a href="source/src/app/winmasker/">winmasker</a>/<a href="source/src/app/winmasker/README">README</a></h3>
+  </td>
+  <td class=menu align=right nowrap>
+      <b><i>source navigation</i></b><br>  <a href="diff/src/app/winmasker/README">diff markup</a><br>  <a href="ident">identifier search</a><br>  <a href="search">freetext search</a><br>  <a href="find">file search</a><br> 
+  </td>
+</tr>
+</table>
+
+<hr>
+<pre>  <a name=L1 href="source/src/app/winmasker/README#L1">1</a> ABSTRACT
+  <a name=L2 href="source/src/app/winmasker/README#L2">2</a> 
+  <a name=L3 href="source/src/app/winmasker/README#L3">3</a>     WindowMasker is a program that identifies and masks out highly 
+  <a name=L4 href="source/src/app/winmasker/README#L4">4</a>     repetitive DNA sequences and DNA sequences with low complexity 
+  <a name=L5 href="source/src/app/winmasker/README#L5">5</a>     in a genome using only the sequence of the genome itself.
+  <a name=L6 href="source/src/app/winmasker/README#L6">6</a>     WindowMasker is described in [1]. Please cite this paper in
+  <a name=L7 href="source/src/app/winmasker/README#L7">7</a>     any publication that uses WindowMasker.
+  <a name=L8 href="source/src/app/winmasker/README#L8">8</a> 
+  <a name=L9 href="source/src/app/winmasker/README#L9">9</a>     The statically linked binary version of windowmasker program
+ <a name=L10 href="source/src/app/winmasker/README#L10">10</a>     compiled for Linux platform is available via FTP at
+ <a name=L11 href="source/src/app/winmasker/README#L11">11</a> 
+ <a name=L12 href="source/src/app/winmasker/README#L12">12</a>     <a href="ftp://ftp.ncbi.nlm.nih.gov/pub/agarwala/windowmasker/windowmasker">ftp://ftp.ncbi.nlm.nih.gov/pub/agarwala/windowmasker/windowmasker</a>
+ <a name=L13 href="source/src/app/winmasker/README#L13">13</a> 
+ <a name=L14 href="source/src/app/winmasker/README#L14">14</a> 
+ <a name=L15 href="source/src/app/winmasker/README#L15">15</a> [1] Morgulis A, Gertz EM, Schaffer AA, Agarwala R. WindowMasker:
+ <a name=L16 href="source/src/app/winmasker/README#L16">16</a>     Window based masker for sequence genomes. Submitted for publication.
+ <a name=L17 href="source/src/app/winmasker/README#L17">17</a> 
+ <a name=L18 href="source/src/app/winmasker/README#L18">18</a> 
+ <a name=L19 href="source/src/app/winmasker/README#L19">19</a> 
+ <a name=L20 href="source/src/app/winmasker/README#L20">20</a> SYNOPSIS
+ <a name=L21 href="source/src/app/winmasker/README#L21">21</a> 
+ <a name=L22 href="source/src/app/winmasker/README#L22">22</a>     windowmasker -mk_counts [-in input_file_name] [-out output_file_name] [-checkdup check_duplicates] [-t_low T_low] [-t_high T_high] [-fa_list input_is_a_list] [-mem available_memory] [-unit unit_length] [-genome_size genome_size] [-exclude_ids exclide_id_list] [-ids id_list] [-infmt input_format] [-sformat unit_counts_format] [-smem available_memory] [-use_ba use_bit_arrays]
+ <a name=L23 href="source/src/app/winmasker/README#L23">23</a> 
+ <a name=L24 href="source/src/app/winmasker/README#L24">24</a>     windowmasker -ustat unit_counts [-in input_file_name] [-out output_file_name] [-window window_size] [-t_thres T_threshold] [-t_extend T_extend] [-t_low T_low] [-t_high T_high] [-set_t_low score] [-set_t_high score] [-infmt input_format] [-outfmt output_format] [-dust use_dust] [-exclude_ids exclude_id_list] [-ids id_list] [-text_match text_match_ids] [-use_ba use_bit_arrays]
+ <a name=L25 href="source/src/app/winmasker/README#L25">25</a> 
+ <a name=L26 href="source/src/app/winmasker/README#L26">26</a>     windowmasker -convert -in input_file_name -out output_file_name [-sformat output_format] [-smem available_memory]
+ <a name=L27 href="source/src/app/winmasker/README#L27">27</a> 
+ <a name=L28 href="source/src/app/winmasker/README#L28">28</a> DESCRIPTION
+ <a name=L29 href="source/src/app/winmasker/README#L29">29</a> 
+ <a name=L30 href="source/src/app/winmasker/README#L30">30</a>     WindowMasker has two modules for masking DNA sequences.  The 
+ <a name=L31 href="source/src/app/winmasker/README#L31">31</a>     WinMask module is used to mask potentially repetitive sequences 
+ <a name=L32 href="source/src/app/winmasker/README#L32">32</a>     by counting the number of times different n-mers (units) occur 
+ <a name=L33 href="source/src/app/winmasker/README#L33">33</a>     in the genome. The DUST module is used to identify and mask low-
+ <a name=L34 href="source/src/app/winmasker/README#L34">34</a>     complexity regions. 
+ <a name=L35 href="source/src/app/winmasker/README#L35">35</a>     
+ <a name=L36 href="source/src/app/winmasker/README#L36">36</a>     The WinMask module works in two stages. During Stage 1, unit 
+ <a name=L37 href="source/src/app/winmasker/README#L37">37</a>     counts are collected and stored in a separate file. During 
+ <a name=L38 href="source/src/app/winmasker/README#L38">38</a>     Stage 2 that file is used to mask the input sequences. Usually 
+ <a name=L39 href="source/src/app/winmasker/README#L39">39</a>     the unit counts file is created once per genome and then used
+ <a name=L40 href="source/src/app/winmasker/README#L40">40</a>     multiple times for masking. In addition, an option is provided
+ <a name=L41 href="source/src/app/winmasker/README#L41">41</a>     to convert between different unit counts formats.
+ <a name=L42 href="source/src/app/winmasker/README#L42">42</a> 
+ <a name=L43 href="source/src/app/winmasker/README#L43">43</a>     Stage 1 is selected with "-mk_counts" flag. Stage 1 processes
+ <a name=L44 href="source/src/app/winmasker/README#L44">44</a>     input data in up to 4 passes.
+ <a name=L45 href="source/src/app/winmasker/README#L45">45</a> 
+ <a name=L46 href="source/src/app/winmasker/README#L46">46</a>         Pass 1 (optional). Checking for long possibly duplicate 
+ <a name=L47 href="source/src/app/winmasker/README#L47">47</a>         sequences in the input. This pass is made when 
+ <a name=L48 href="source/src/app/winmasker/README#L48">48</a>         "-checkdup true" is selected.
+ <a name=L49 href="source/src/app/winmasker/README#L49">49</a> 
+ <a name=L50 href="source/src/app/winmasker/README#L50">50</a>         Pass 2 (optional). Compute the total size in bases (bp) of 
+ <a name=L51 href="source/src/app/winmasker/README#L51">51</a>         the genome.  This pass is made when neither unit length 
+ <a name=L52 href="source/src/app/winmasker/README#L52">52</a>         ("-unit") nor the genome size ("-genome_size") are given on 
+ <a name=L53 href="source/src/app/winmasker/README#L53">53</a>         the command line. Knowledge of genome size is necessary to 
+ <a name=L54 href="source/src/app/winmasker/README#L54">54</a>         compute the unit length automatically.
+ <a name=L55 href="source/src/app/winmasker/README#L55">55</a> 
+ <a name=L56 href="source/src/app/winmasker/README#L56">56</a>         Pass 3 (optional). Compute unit score thresholds T_threshold, 
+ <a name=L57 href="source/src/app/winmasker/README#L57">57</a>         T_extend, T_low, and T_high. In particular the values of 
+ <a name=L58 href="source/src/app/winmasker/README#L58">58</a>         T_low and T_high are necessary for the final pass to save only 
+ <a name=L59 href="source/src/app/winmasker/README#L59">59</a>         the counts for the units with score above or equal to T_low 
+ <a name=L60 href="source/src/app/winmasker/README#L60">60</a>         and to change the counts of units that are below or equal to 
+ <a name=L61 href="source/src/app/winmasker/README#L61">61</a>         T_high to the value of T_high. This pass can be avoided by 
+ <a name=L62 href="source/src/app/winmasker/README#L62">62</a>         using "-t_low" and "-t_high" command line options that 
+ <a name=L63 href="source/src/app/winmasker/README#L63">63</a>         explicitly set the values of T_low and T_high.
+ <a name=L64 href="source/src/app/winmasker/README#L64">64</a> 
+ <a name=L65 href="source/src/app/winmasker/README#L65">65</a>         Pass 4. Generate the file containing the unit length, 
+ <a name=L66 href="source/src/app/winmasker/README#L66">66</a>         significant (above T_low) unit counts, and threshold values.
+ <a name=L67 href="source/src/app/winmasker/README#L67">67</a>         The counts of units that appear more than T_high times
+ <a name=L68 href="source/src/app/winmasker/README#L68">68</a>         in the genome are assigned the count value of T_high.
+ <a name=L69 href="source/src/app/winmasker/README#L69">69</a>         
+ <a name=L70 href="source/src/app/winmasker/README#L70">70</a>     Stage 2 is enabled by providing "-ustat &lt;stat_file&gt;" argument.
+ <a name=L71 href="source/src/app/winmasker/README#L71">71</a>     WindowMasker reads the data generated in Stage 1 and a set of 
+ <a name=L72 href="source/src/app/winmasker/README#L72">72</a>     input DNA sequences to output information about masked 
+ <a name=L73 href="source/src/app/winmasker/README#L73">73</a>     subintervals. If "-dust true" is specified, then 
+ <a name=L74 href="source/src/app/winmasker/README#L74">74</a>     the corresponding algorithm of the DUST module is applied to the 
+ <a name=L75 href="source/src/app/winmasker/README#L75">75</a>     input sequences in addition to window based masking. When DUST 
+ <a name=L76 href="source/src/app/winmasker/README#L76">76</a>     module is run, the results of the DUST and WinMask modules are 
+ <a name=L77 href="source/src/app/winmasker/README#L77">77</a>     merged together in the output. Specifically, a base is masked if 
+ <a name=L78 href="source/src/app/winmasker/README#L78">78</a>     it is masked by either DUST or by WinMask.
+ <a name=L79 href="source/src/app/winmasker/README#L79">79</a> 
+ <a name=L80 href="source/src/app/winmasker/README#L80">80</a>     The unit counts format conversion function is triggered by
+ <a name=L81 href="source/src/app/winmasker/README#L81">81</a>     "-convert" flag.
+ <a name=L82 href="source/src/app/winmasker/README#L82">82</a> 
+ <a name=L83 href="source/src/app/winmasker/README#L83">83</a> OPTIONS
+ <a name=L84 href="source/src/app/winmasker/README#L84">84</a> 
+ <a name=L85 href="source/src/app/winmasker/README#L85">85</a>     In this section, command line options to WindowMasker are 
+ <a name=L86 href="source/src/app/winmasker/README#L86">86</a>     explained. There are two subsections for Stage 1 options and 
+ <a name=L87 href="source/src/app/winmasker/README#L87">87</a>     Stage 2 options. Some options are applicable in both stages 
+ <a name=L88 href="source/src/app/winmasker/README#L88">88</a>     but could have somewhat different meaning.
+ <a name=L89 href="source/src/app/winmasker/README#L89">89</a> 
+ <a name=L90 href="source/src/app/winmasker/README#L90">90</a> 
+ <a name=L91 href="source/src/app/winmasker/README#L91">91</a> Options Selecting WindowMasker Mode of Operation
+ <a name=L92 href="source/src/app/winmasker/README#L92">92</a> 
+ <a name=L93 href="source/src/app/winmasker/README#L93">93</a>     -mk_counts 
+ <a name=L94 href="source/src/app/winmasker/README#L94">94</a> 
+ <a name=L95 href="source/src/app/winmasker/README#L95">95</a>         The presence of this flag enables Stage 1 processing
+ <a name=L96 href="source/src/app/winmasker/README#L96">96</a>         (counts creation).
+ <a name=L97 href="source/src/app/winmasker/README#L97">97</a> 
+ <a name=L98 href="source/src/app/winmasker/README#L98">98</a>     -convert
+ <a name=L99 href="source/src/app/winmasker/README#L99">99</a> 
+<a name=L100 href="source/src/app/winmasker/README#L100">100</a>         If this flag is given, windowmasker functions as a converter
+<a name=L101 href="source/src/app/winmasker/README#L101">101</a>         between different supported counts formats. In this case
+<a name=L102 href="source/src/app/winmasker/README#L102">102</a>         options other than "-in", "-out", "-sformat", and "-smem" are 
+<a name=L103 href="source/src/app/winmasker/README#L103">103</a>         not supported.
+<a name=L104 href="source/src/app/winmasker/README#L104">104</a> 
+<a name=L105 href="source/src/app/winmasker/README#L105">105</a>     -ustat unit_counts
+<a name=L106 href="source/src/app/winmasker/README#L106">106</a> 
+<a name=L107 href="source/src/app/winmasker/README#L107">107</a>         This option enables Stage 2 processing. It specifies
+<a name=L108 href="source/src/app/winmasker/README#L108">108</a>         the name of the file containing the unit counts for the
+<a name=L109 href="source/src/app/winmasker/README#L109">109</a>         genome in use. Unit counts are typically created during
+<a name=L110 href="source/src/app/winmasker/README#L110">110</a>         Stage 1 of WindowMasker processing. The format of the unit
+<a name=L111 href="source/src/app/winmasker/README#L111">111</a>         counts file is recognized automatically
+<a name=L112 href="source/src/app/winmasker/README#L112">112</a> 
+<a name=L113 href="source/src/app/winmasker/README#L113">113</a> Common Options
+<a name=L114 href="source/src/app/winmasker/README#L114">114</a> 
+<a name=L115 href="source/src/app/winmasker/README#L115">115</a>     -exclude_ids exclude_id_list
+<a name=L116 href="source/src/app/winmasker/README#L116">116</a> 
+<a name=L117 href="source/src/app/winmasker/README#L117">117</a>         default: &lt;empty&gt;
+<a name=L118 href="source/src/app/winmasker/README#L118">118</a> 
+<a name=L119 href="source/src/app/winmasker/README#L119">119</a>         The name of the file containing the list of sequence ids (one 
+<a name=L120 href="source/src/app/winmasker/README#L120">120</a>         per line) in the input that should not be processed.  See 
+<a name=L121 href="source/src/app/winmasker/README#L121">121</a>         section FILES for an example. This option and "-ids" option 
+<a name=L122 href="source/src/app/winmasker/README#L122">122</a>         are mutually exclusive.
+<a name=L123 href="source/src/app/winmasker/README#L123">123</a> 
+<a name=L124 href="source/src/app/winmasker/README#L124">124</a>     -ids id_list
+<a name=L125 href="source/src/app/winmasker/README#L125">125</a> 
+<a name=L126 href="source/src/app/winmasker/README#L126">126</a>         default: &lt;empty&gt;
+<a name=L127 href="source/src/app/winmasker/README#L127">127</a> 
+<a name=L128 href="source/src/app/winmasker/README#L128">128</a>         The name of the file containing the list of sequence ids (one 
+<a name=L129 href="source/src/app/winmasker/README#L129">129</a>         per line) in the input that should be processed. See section 
+<a name=L130 href="source/src/app/winmasker/README#L130">130</a>         FILES for an example. This option and "-exclude_ids" option 
+<a name=L131 href="source/src/app/winmasker/README#L131">131</a>         are mutually exclusive.
+<a name=L132 href="source/src/app/winmasker/README#L132">132</a> 
+<a name=L133 href="source/src/app/winmasker/README#L133">133</a>     -use_ba true/false
+<a name=L134 href="source/src/app/winmasker/README#L134">134</a> 
+<a name=L135 href="source/src/app/winmasker/README#L135">135</a>         default: true
+<a name=L136 href="source/src/app/winmasker/README#L136">136</a> 
+<a name=L137 href="source/src/app/winmasker/README#L137">137</a>         Optimize unit counts data structure performance using bit arrays
+<a name=L138 href="source/src/app/winmasker/README#L138">138</a>         if possible. This increases the masking speed by about 20% but
+<a name=L139 href="source/src/app/winmasker/README#L139">139</a>         also increases the process memory footprint. This optimization
+<a name=L140 href="source/src/app/winmasker/README#L140">140</a>         is currently available only for unit counts database created
+<a name=L141 href="source/src/app/winmasker/README#L141">141</a>         with "-sformat obinary" option.
+<a name=L142 href="source/src/app/winmasker/README#L142">142</a> 
+<a name=L143 href="source/src/app/winmasker/README#L143">143</a> Stage 1 Options
+<a name=L144 href="source/src/app/winmasker/README#L144">144</a> 
+<a name=L145 href="source/src/app/winmasker/README#L145">145</a>     -checkdup true/false
+<a name=L146 href="source/src/app/winmasker/README#L146">146</a> 
+<a name=L147 href="source/src/app/winmasker/README#L147">147</a>         default: false
+<a name=L148 href="source/src/app/winmasker/README#L148">148</a> 
+<a name=L149 href="source/src/app/winmasker/README#L149">149</a>         If the value is true, then a pass is made to check the input 
+<a name=L150 href="source/src/app/winmasker/README#L150">150</a>         for long possibly duplicate sequences. The algorithm is 
+<a name=L151 href="source/src/app/winmasker/README#L151">151</a>         heuristic. For a pair of sequences a match is reported if at 
+<a name=L152 href="source/src/app/winmasker/README#L152">152</a>         least 5 100 bp segments approximately 10000 bp apart match 
+<a name=L153 href="source/src/app/winmasker/README#L153">153</a>         exactly. "Approximately" above means that some fuzziness is 
+<a name=L154 href="source/src/app/winmasker/README#L154">154</a>         allowed in the distance between consecutive 100 bp segments. 
+<a name=L155 href="source/src/app/winmasker/README#L155">155</a>         This criterion will detect all duplicates as well as some 
+<a name=L156 href="source/src/app/winmasker/README#L156">156</a>         false positives. In our experience, duplicates arise when 
+<a name=L157 href="source/src/app/winmasker/README#L157">157</a>         multiple, distinct assemblies of some part (e.g., one 
+<a name=L158 href="source/src/app/winmasker/README#L158">158</a>         chromosome) of the genome pieces are considered as part of 
+<a name=L159 href="source/src/app/winmasker/README#L159">159</a>         the sequenced genome.
+<a name=L160 href="source/src/app/winmasker/README#L160">160</a> 
+<a name=L161 href="source/src/app/winmasker/README#L161">161</a>     -fa_list true/false
+<a name=L162 href="source/src/app/winmasker/README#L162">162</a> 
+<a name=L163 href="source/src/app/winmasker/README#L163">163</a>         default: false
+<a name=L164 href="source/src/app/winmasker/README#L164">164</a> 
+<a name=L165 href="source/src/app/winmasker/README#L165">165</a>         If the value of this parameter is true, then "-in" option
+<a name=L166 href="source/src/app/winmasker/README#L166">166</a>         specifies a file containing a list of pathnames (one pathname
+<a name=L167 href="source/src/app/winmasker/README#L167">167</a>         per line) to the FASTA formatted files that will be used as 
+<a name=L168 href="source/src/app/winmasker/README#L168">168</a>         input. Otherwise "-in" option specifies a single FASTA
+<a name=L169 href="source/src/app/winmasker/README#L169">169</a>         formatted file.
+<a name=L170 href="source/src/app/winmasker/README#L170">170</a> 
+<a name=L171 href="source/src/app/winmasker/README#L171">171</a>     -genome_size genome_size
+<a name=L172 href="source/src/app/winmasker/README#L172">172</a> 
+<a name=L173 href="source/src/app/winmasker/README#L173">173</a>         default: &lt;empty&gt;
+<a name=L174 href="source/src/app/winmasker/README#L174">174</a> 
+<a name=L175 href="source/src/app/winmasker/README#L175">175</a>         Explicitly specify the genome length in number of bases.  If 
+<a name=L176 href="source/src/app/winmasker/README#L176">176</a>         this parameter is not used then the genome length is computed 
+<a name=L177 href="source/src/app/winmasker/README#L177">177</a>         as the sum of lengths of all input sequences.  This parameter 
+<a name=L178 href="source/src/app/winmasker/README#L178">178</a>         does not have any effect if "-unit" option is specified. 
+<a name=L179 href="source/src/app/winmasker/README#L179">179</a>         Otherwise it is used to compute the unit length.
+<a name=L180 href="source/src/app/winmasker/README#L180">180</a> 
+<a name=L181 href="source/src/app/winmasker/README#L181">181</a>     -in input_file_name
+<a name=L182 href="source/src/app/winmasker/README#L182">182</a> 
+<a name=L183 href="source/src/app/winmasker/README#L183">183</a>         default: &lt;empty&gt;
+<a name=L184 href="source/src/app/winmasker/README#L184">184</a> 
+<a name=L185 href="source/src/app/winmasker/README#L185">185</a>         The location of the input file. The contents of the input 
+<a name=L186 href="source/src/app/winmasker/README#L186">186</a>         file depends on the value of "-fa_list" and "-convert" options. 
+<a name=L187 href="source/src/app/winmasker/README#L187">187</a>         
+<a name=L188 href="source/src/app/winmasker/README#L188">188</a>         If "-fa_list false" is specified, input file is a single FASTA '
+<a name=L189 href="source/src/app/winmasker/README#L189">189</a>         formatted file. Unit counts will be generated based on the 
+<a name=L190 href="source/src/app/winmasker/README#L190">190</a>         sequences in that file.  If "-fa_list true" is specified, then 
+<a name=L191 href="source/src/app/winmasker/README#L191">191</a>         input file contains a list of pathnames (one per line) of FASTA 
+<a name=L192 href="source/src/app/winmasker/README#L192">192</a>         formatted files that form the genome. In this case unit 
+<a name=L193 href="source/src/app/winmasker/README#L193">193</a>         counts will be generated based on all the sequences contained 
+<a name=L194 href="source/src/app/winmasker/README#L194">194</a>         in the listed files.
+<a name=L195 href="source/src/app/winmasker/README#L195">195</a> 
+<a name=L196 href="source/src/app/winmasker/README#L196">196</a>         If "-convert" is specified, then "-in" option is required
+<a name=L197 href="source/src/app/winmasker/README#L197">197</a>         and its value must be the name of a valid unit counts file.
+<a name=L198 href="source/src/app/winmasker/README#L198">198</a> 
+<a name=L199 href="source/src/app/winmasker/README#L199">199</a>     -infmt input_format
+<a name=L200 href="source/src/app/winmasker/README#L200">200</a> 
+<a name=L201 href="source/src/app/winmasker/README#L201">201</a>         default: fasta
+<a name=L202 href="source/src/app/winmasker/README#L202">202</a> 
+<a name=L203 href="source/src/app/winmasker/README#L203">203</a>         The possible values are "fasta" for reading sequence data from
+<a name=L204 href="source/src/app/winmasker/README#L204">204</a>         FASTA formatted file, and "blastdb" for reading sequence data
+<a name=L205 href="source/src/app/winmasker/README#L205">205</a>         from a BLAST database. 
+<a name=L206 href="source/src/app/winmasker/README#L206">206</a> 
+<a name=L207 href="source/src/app/winmasker/README#L207">207</a>     -mem available_memory
+<a name=L208 href="source/src/app/winmasker/README#L208">208</a> 
+<a name=L209 href="source/src/app/winmasker/README#L209">209</a>         default: 1536
+<a name=L210 href="source/src/app/winmasker/README#L210">210</a> 
+<a name=L211 href="source/src/app/winmasker/README#L211">211</a>         Assume that this much RAM is available for WindowMasker.  The 
+<a name=L212 href="source/src/app/winmasker/README#L212">212</a>         value is in megabytes. Depending on the amount of available 
+<a name=L213 href="source/src/app/winmasker/README#L213">213</a>         memory, passes 3 and 4 of stage 2 could contain additional 
+<a name=L214 href="source/src/app/winmasker/README#L214">214</a>         subpasses.  This is especially true for large (&gt;=14) values 
+<a name=L215 href="source/src/app/winmasker/README#L215">215</a>         of unit length.
+<a name=L216 href="source/src/app/winmasker/README#L216">216</a> 
+<a name=L217 href="source/src/app/winmasker/README#L217">217</a>     -out output_file_name
+<a name=L218 href="source/src/app/winmasker/README#L218">218</a> 
+<a name=L219 href="source/src/app/winmasker/README#L219">219</a>         default: &lt;stdout&gt;
+<a name=L220 href="source/src/app/winmasker/README#L220">220</a> 
+<a name=L221 href="source/src/app/winmasker/README#L221">221</a>         The location of the output file. This parameter is optional
+<a name=L222 href="source/src/app/winmasker/README#L222">222</a>         and standard output is used if it is not specified.  Section 
+<a name=L223 href="source/src/app/winmasker/README#L223">223</a>         FILES contains the description of format of the file.
+<a name=L224 href="source/src/app/winmasker/README#L224">224</a> 
+<a name=L225 href="source/src/app/winmasker/README#L225">225</a>         If "-convert" option is given then "-out" option is
+<a name=L226 href="source/src/app/winmasker/README#L226">226</a>         required and specifies the name of the target output unit
+<a name=L227 href="source/src/app/winmasker/README#L227">227</a>         counts file.
+<a name=L228 href="source/src/app/winmasker/README#L228">228</a> 
+<a name=L229 href="source/src/app/winmasker/README#L229">229</a>     -sformat unit_counts_format
+<a name=L230 href="source/src/app/winmasker/README#L230">230</a> 
+<a name=L231 href="source/src/app/winmasker/README#L231">231</a>         default: ascii
+<a name=L232 href="source/src/app/winmasker/README#L232">232</a> 
+<a name=L233 href="source/src/app/winmasker/README#L233">233</a>         The format in which the unit counts data should be generated.
+<a name=L234 href="source/src/app/winmasker/README#L234">234</a>         The possible values are "ascii", "binary", "oascii", or 
+<a name=L235 href="source/src/app/winmasker/README#L235">235</a>         "obinary". "ascii" makes windowmasker generate unit counts 
+<a name=L236 href="source/src/app/winmasker/README#L236">236</a>         in human readable text form, which is highly portable but 
+<a name=L237 href="source/src/app/winmasker/README#L237">237</a>         slow to load during Stage 2.  The "binary" format is not 
+<a name=L238 href="source/src/app/winmasker/README#L238">238</a>         portable but loads very fast. The last two formats 
+<a name=L239 href="source/src/app/winmasker/README#L239">239</a>         correspond to optimized (via hash tables) unit counts data
+<a name=L240 href="source/src/app/winmasker/README#L240">240</a>         structures. They require more memory to create during Stage 1.
+<a name=L241 href="source/src/app/winmasker/README#L241">241</a>         However using them results in 2.5 - 4 times imrovement in
+<a name=L242 href="source/src/app/winmasker/README#L242">242</a>         performance of the WinMask module. "obinary" stores data in 
+<a name=L243 href="source/src/app/winmasker/README#L243">243</a>         a binary form which is not portable. "oascii" stores data 
+<a name=L244 href="source/src/app/winmasker/README#L244">244</a>         in a portable text format at the expense of startup performance
+<a name=L245 href="source/src/app/winmasker/README#L245">245</a>         during Stage 2.
+<a name=L246 href="source/src/app/winmasker/README#L246">246</a> 
+<a name=L247 href="source/src/app/winmasker/README#L247">247</a>         If "-convert" option is specified, then "-sformat" 
+<a name=L248 href="source/src/app/winmasker/README#L248">248</a>         determines the conversion target format.
+<a name=L249 href="source/src/app/winmasker/README#L249">249</a> 
+<a name=L250 href="source/src/app/winmasker/README#L250">250</a>     -smem available_memory
+<a name=L251 href="source/src/app/winmasker/README#L251">251</a> 
+<a name=L252 href="source/src/app/winmasker/README#L252">252</a>         default: 512
+<a name=L253 href="source/src/app/winmasker/README#L253">253</a> 
+<a name=L254 href="source/src/app/winmasker/README#L254">254</a>         This option is ignored for "ascii" and "binary" unit counts
+<a name=L255 href="source/src/app/winmasker/README#L255">255</a>         formats. For "oascii" and "obinary" this option specifies
+<a name=L256 href="source/src/app/winmasker/README#L256">256</a>         the upper limit (in megabytes) for the size of the unit counts 
+<a name=L257 href="source/src/app/winmasker/README#L257">257</a>         data structure in memory. WindowMasker will try to produce 
+<a name=L258 href="source/src/app/winmasker/README#L258">258</a>         the data structure smaller than the specified size. If that
+<a name=L259 href="source/src/app/winmasker/README#L259">259</a>         is not possible, error is reported.
+<a name=L260 href="source/src/app/winmasker/README#L260">260</a> 
+<a name=L261 href="source/src/app/winmasker/README#L261">261</a>     -t_low T_low
+<a name=L262 href="source/src/app/winmasker/README#L262">262</a> 
+<a name=L263 href="source/src/app/winmasker/README#L263">263</a>         default: &lt;empty&gt;
+<a name=L264 href="source/src/app/winmasker/README#L264">264</a>         
+<a name=L265 href="source/src/app/winmasker/README#L265">265</a>         Save only information about units with counts equal or bigger
+<a name=L266 href="source/src/app/winmasker/README#L266">266</a>         than T_low. If "-t_low" is not specified on command line, then
+<a name=L267 href="source/src/app/winmasker/README#L267">267</a>         its value is computed so that 90% of all units present in the 
+<a name=L268 href="source/src/app/winmasker/README#L268">268</a>         genome have counts below T_low.
+<a name=L269 href="source/src/app/winmasker/README#L269">269</a> 
+<a name=L270 href="source/src/app/winmasker/README#L270">270</a>     -t_high T_high
+<a name=L271 href="source/src/app/winmasker/README#L271">271</a> 
+<a name=L272 href="source/src/app/winmasker/README#L272">272</a>         default: &lt;empty&gt;
+<a name=L273 href="source/src/app/winmasker/README#L273">273</a> 
+<a name=L274 href="source/src/app/winmasker/README#L274">274</a>         The units that appear more than T_high times in the genome
+<a name=L275 href="source/src/app/winmasker/README#L275">275</a>         are given the count value of T_high. If "-t_high" is not 
+<a name=L276 href="source/src/app/winmasker/README#L276">276</a>         specified on command line, then its value is computed so that
+<a name=L277 href="source/src/app/winmasker/README#L277">277</a>         99.8% of all units present in the genome have counts below
+<a name=L278 href="source/src/app/winmasker/README#L278">278</a>         T_high.
+<a name=L279 href="source/src/app/winmasker/README#L279">279</a> 
+<a name=L280 href="source/src/app/winmasker/README#L280">280</a>     -unit unit_length
+<a name=L281 href="source/src/app/winmasker/README#L281">281</a> 
+<a name=L282 href="source/src/app/winmasker/README#L282">282</a>         default: &lt;empty&gt;
+<a name=L283 href="source/src/app/winmasker/README#L283">283</a> 
+<a name=L284 href="source/src/app/winmasker/README#L284">284</a>         Specifies the unit length to use. The value is an integer 
+<a name=L285 href="source/src/app/winmasker/README#L285">285</a>         between 1 and 16. If this parameter is not specified then
+<a name=L286 href="source/src/app/winmasker/README#L286">286</a>         unit length is computed automatically from the genome length 
+<a name=L287 href="source/src/app/winmasker/README#L287">287</a>         L in bases as the smallest number N such that L/4^N &gt; 5.
+<a name=L288 href="source/src/app/winmasker/README#L288">288</a> 
+<a name=L289 href="source/src/app/winmasker/README#L289">289</a> Stage 2 Options
+<a name=L290 href="source/src/app/winmasker/README#L290">290</a> 
+<a name=L291 href="source/src/app/winmasker/README#L291">291</a>     -dust true/false
+<a name=L292 href="source/src/app/winmasker/README#L292">292</a> 
+<a name=L293 href="source/src/app/winmasker/README#L293">293</a>         default: false
+<a name=L294 href="source/src/app/winmasker/README#L294">294</a> 
+<a name=L295 href="source/src/app/winmasker/README#L295">295</a>         Use the symmetric algorithm of the DUST module in addition 
+<a name=L296 href="source/src/app/winmasker/README#L296">296</a>         to the WinMask module to mask out low-complexity regions. 
+<a name=L297 href="source/src/app/winmasker/README#L297">297</a> 
+<a name=L298 href="source/src/app/winmasker/README#L298">298</a>     -in input_file_name
+<a name=L299 href="source/src/app/winmasker/README#L299">299</a> 
+<a name=L300 href="source/src/app/winmasker/README#L300">300</a>         default: &lt;stdin&gt;
+<a name=L301 href="source/src/app/winmasker/README#L301">301</a> 
+<a name=L302 href="source/src/app/winmasker/README#L302">302</a>         Specifies the input file for masking. WindowMasker accepts 
+<a name=L303 href="source/src/app/winmasker/README#L303">303</a>         input in FASTA format. If this option is skipped, then the 
+<a name=L304 href="source/src/app/winmasker/README#L304">304</a>         standard input will be used as the source of input. 
+<a name=L305 href="source/src/app/winmasker/README#L305">305</a> 
+<a name=L306 href="source/src/app/winmasker/README#L306">306</a>     -infmt input_format
+<a name=L307 href="source/src/app/winmasker/README#L307">307</a> 
+<a name=L308 href="source/src/app/winmasker/README#L308">308</a>         default: fasta
+<a name=L309 href="source/src/app/winmasker/README#L309">309</a> 
+<a name=L310 href="source/src/app/winmasker/README#L310">310</a>         The possible values are "fasta" for reading sequence data from
+<a name=L311 href="source/src/app/winmasker/README#L311">311</a>         FASTA formatted file, and "blastdb" for reading sequence data
+<a name=L312 href="source/src/app/winmasker/README#L312">312</a>         from a BLAST database. 
+<a name=L313 href="source/src/app/winmasker/README#L313">313</a> 
+<a name=L314 href="source/src/app/winmasker/README#L314">314</a>     -outfmt output_format
+<a name=L315 href="source/src/app/winmasker/README#L315">315</a> 
+<a name=L316 href="source/src/app/winmasker/README#L316">316</a>         default: interval
+<a name=L317 href="source/src/app/winmasker/README#L317">317</a> 
+<a name=L318 href="source/src/app/winmasker/README#L318">318</a>         The possible values are "interval" and "fasta". If "fasta" 
+<a name=L319 href="source/src/app/winmasker/README#L319">319</a>         is selected the output is a FASTA formatted file with masked 
+<a name=L320 href="source/src/app/winmasker/README#L320">320</a>         regions in lower case letters. If the interval format is 
+<a name=L321 href="source/src/app/winmasker/README#L321">321</a>         selected the output is a file containing, for each processed 
+<a name=L322 href="source/src/app/winmasker/README#L322">322</a>         sequence, a sorted set of continuous masked subsequences.  
+<a name=L323 href="source/src/app/winmasker/README#L323">323</a>         For the format of the intervals file see section FILES.  
+<a name=L324 href="source/src/app/winmasker/README#L324">324</a>         [NOTE: Case of the input does not matter. All input sequences 
+<a name=L325 href="source/src/app/winmasker/README#L325">325</a>         are considered unmasked and window masker does not preserve 
+<a name=L326 href="source/src/app/winmasker/README#L326">326</a>         the case of the input.]
+<a name=L327 href="source/src/app/winmasker/README#L327">327</a> 
+<a name=L328 href="source/src/app/winmasker/README#L328">328</a>     -out output_file_name
+<a name=L329 href="source/src/app/winmasker/README#L329">329</a> 
+<a name=L330 href="source/src/app/winmasker/README#L330">330</a>         default: &lt;stdout&gt;
+<a name=L331 href="source/src/app/winmasker/README#L331">331</a> 
+<a name=L332 href="source/src/app/winmasker/README#L332">332</a>         Specifies the output file. The output file format depends on
+<a name=L333 href="source/src/app/winmasker/README#L333">333</a>         the value of "-outfmt" option. If this option is skipped,
+<a name=L334 href="source/src/app/winmasker/README#L334">334</a>         then the standard output will be used as the output file
+<a name=L335 href="source/src/app/winmasker/README#L335">335</a>         descriptor.
+<a name=L336 href="source/src/app/winmasker/README#L336">336</a> 
+<a name=L337 href="source/src/app/winmasker/README#L337">337</a>     -set_t_high score
+<a name=L338 href="source/src/app/winmasker/README#L338">338</a> 
+<a name=L339 href="source/src/app/winmasker/README#L339">339</a>         default: T_high
+<a name=L340 href="source/src/app/winmasker/README#L340">340</a> 
+<a name=L341 href="source/src/app/winmasker/README#L341">341</a>         The score value for units with unit count above T_high.
+<a name=L342 href="source/src/app/winmasker/README#L342">342</a>         See [1] for details.
+<a name=L343 href="source/src/app/winmasker/README#L343">343</a> 
+<a name=L344 href="source/src/app/winmasker/README#L344">344</a>     -set_t_low score
+<a name=L345 href="source/src/app/winmasker/README#L345">345</a> 
+<a name=L346 href="source/src/app/winmasker/README#L346">346</a>         default: (T_low + 1)/2
+<a name=L347 href="source/src/app/winmasker/README#L347">347</a> 
+<a name=L348 href="source/src/app/winmasker/README#L348">348</a>         The score value for units with unit count below T_low.
+<a name=L349 href="source/src/app/winmasker/README#L349">349</a>         See [1] for details.
+<a name=L350 href="source/src/app/winmasker/README#L350">350</a> 
+<a name=L351 href="source/src/app/winmasker/README#L351">351</a>     -t_extend T_extend
+<a name=L352 href="source/src/app/winmasker/README#L352">352</a> 
+<a name=L353 href="source/src/app/winmasker/README#L353">353</a>         default: &lt;the value from unit counts file&gt;
+<a name=L354 href="source/src/app/winmasker/README#L354">354</a> 
+<a name=L355 href="source/src/app/winmasker/README#L355">355</a>         This parameter defines whether the interval between two
+<a name=L356 href="source/src/app/winmasker/README#L356">356</a>         windows with score higher than T_threshold is masked. The
+<a name=L357 href="source/src/app/winmasker/README#L357">357</a>         interval will be masked if every base of the interval lies 
+<a name=L358 href="source/src/app/winmasker/README#L358">358</a>         within a window of score greater or equal than T_extend.  For 
+<a name=L359 href="source/src/app/winmasker/README#L359">359</a>         the definition of the window score see description of 
+<a name=L360 href="source/src/app/winmasker/README#L360">360</a>         "-window_size" option. This parameter overrides the value
+<a name=L361 href="source/src/app/winmasker/README#L361">361</a>         contained in the unit counts file.
+<a name=L362 href="source/src/app/winmasker/README#L362">362</a> 
+<a name=L363 href="source/src/app/winmasker/README#L363">363</a>     -t_high T_high
+<a name=L364 href="source/src/app/winmasker/README#L364">364</a> 
+<a name=L365 href="source/src/app/winmasker/README#L365">365</a>         default: &lt;the value from unit counts file&gt;
+<a name=L366 href="source/src/app/winmasker/README#L366">366</a> 
+<a name=L367 href="source/src/app/winmasker/README#L367">367</a>         This parameter overrides the value contained in the unit
+<a name=L368 href="source/src/app/winmasker/README#L368">368</a>         counts file. Since the unit counts file does not contain
+<a name=L369 href="source/src/app/winmasker/README#L369">369</a>         unit counts values larger than T_high value computed
+<a name=L370 href="source/src/app/winmasker/README#L370">370</a>         at Stage 1, it only makes sense to specify a T_high value
+<a name=L371 href="source/src/app/winmasker/README#L371">371</a>         that is less than the one in the unit counts file. Units 
+<a name=L372 href="source/src/app/winmasker/README#L372">372</a>         with counts greater than T_high will not be read from the 
+<a name=L373 href="source/src/app/winmasker/README#L373">373</a>         unit_counts file and the value of "-set_t_high" will be used 
+<a name=L374 href="source/src/app/winmasker/README#L374">374</a>         as the result of unit count lookup.
+<a name=L375 href="source/src/app/winmasker/README#L375">375</a> 
+<a name=L376 href="source/src/app/winmasker/README#L376">376</a>     -t_low T_low
+<a name=L377 href="source/src/app/winmasker/README#L377">377</a> 
+<a name=L378 href="source/src/app/winmasker/README#L378">378</a>         default: &lt;the value from unit counts file&gt;
+<a name=L379 href="source/src/app/winmasker/README#L379">379</a> 
+<a name=L380 href="source/src/app/winmasker/README#L380">380</a>         This parameter overrides the value contained in the unit
+<a name=L381 href="source/src/app/winmasker/README#L381">381</a>         counts file. Since the unit counts file does not keep counts
+<a name=L382 href="source/src/app/winmasker/README#L382">382</a>         of the units that appear fewer than T_low times in the
+<a name=L383 href="source/src/app/winmasker/README#L383">383</a>         genome, it only makes sense to specify a T_low value that is 
+<a name=L384 href="source/src/app/winmasker/README#L384">384</a>         greater than the one in the unit counts file. In that case 
+<a name=L385 href="source/src/app/winmasker/README#L385">385</a>         unit with counts that are less than T_low will not be read 
+<a name=L386 href="source/src/app/winmasker/README#L386">386</a>         from the unit counts file and the value of "-set_t_low" 
+<a name=L387 href="source/src/app/winmasker/README#L387">387</a>         option will be used as the result of unit count lookup.
+<a name=L388 href="source/src/app/winmasker/README#L388">388</a> 
+<a name=L389 href="source/src/app/winmasker/README#L389">389</a>     -t_thres T_threshold
+<a name=L390 href="source/src/app/winmasker/README#L390">390</a> 
+<a name=L391 href="source/src/app/winmasker/README#L391">391</a>         default: &lt;the value from unit counts file&gt;
+<a name=L392 href="source/src/app/winmasker/README#L392">392</a> 
+<a name=L393 href="source/src/app/winmasker/README#L393">393</a>         All windows with score above T_threshold are masked. For the
+<a name=L394 href="source/src/app/winmasker/README#L394">394</a>         definition of the window score see description of 
+<a name=L395 href="source/src/app/winmasker/README#L395">395</a>         "-window_size" option. This parameter overrides the value
+<a name=L396 href="source/src/app/winmasker/README#L396">396</a>         contained in the unit counts file.
+<a name=L397 href="source/src/app/winmasker/README#L397">397</a> 
+<a name=L398 href="source/src/app/winmasker/README#L398">398</a>     -text_match true/false
+<a name=L399 href="source/src/app/winmasker/README#L399">399</a> 
+<a name=L400 href="source/src/app/winmasker/README#L400">400</a>         default: true
+<a name=L401 href="source/src/app/winmasker/README#L401">401</a> 
+<a name=L402 href="source/src/app/winmasker/README#L402">402</a>         This option applies to "-exclude_ids" and "-ids" options.
+<a name=L403 href="source/src/app/winmasker/README#L403">403</a>         If set to "false" the sequence ids are compared as instances
+<a name=L404 href="source/src/app/winmasker/README#L404">404</a>         of CSeq_id classes. If set to "true" the sequence ids are
+<a name=L405 href="source/src/app/winmasker/README#L405">405</a>         compared as strings. In that case each id is represented as
+<a name=L406 href="source/src/app/winmasker/README#L406">406</a>         a sequence of words separated by '|' characters. A sequence
+<a name=L407 href="source/src/app/winmasker/README#L407">407</a>         is found in "exclude_ids" or "ids" set if some element of
+<a name=L408 href="source/src/app/winmasker/README#L408">408</a>         the set contains a subsequence of the given sequence which
+<a name=L409 href="source/src/app/winmasker/README#L409">409</a>         spans that whole number of words. This option allows to 
+<a name=L410 href="source/src/app/winmasker/README#L410">410</a>         overcome some problems resulting from direct CSeq_id 
+<a name=L411 href="source/src/app/winmasker/README#L411">411</a>         comparisons.
+<a name=L412 href="source/src/app/winmasker/README#L412">412</a> 
+<a name=L413 href="source/src/app/winmasker/README#L413">413</a>     -window window_size
+<a name=L414 href="source/src/app/winmasker/README#L414">414</a> 
+<a name=L415 href="source/src/app/winmasker/README#L415">415</a>         default &lt;use unit_size + 4&gt;
+<a name=L416 href="source/src/app/winmasker/README#L416">416</a> 
+<a name=L417 href="source/src/app/winmasker/README#L417">417</a>         The WinMask module works by tracking the score of a sliding
+<a name=L418 href="source/src/app/winmasker/README#L418">418</a>         window which is defined as average of counts of all units 
+<a name=L419 href="source/src/app/winmasker/README#L419">419</a>         within the window. This parameter defines the size of the 
+<a name=L420 href="source/src/app/winmasker/README#L420">420</a>         sliding window. By default the value unit_size + 4 is used so 
+<a name=L421 href="source/src/app/winmasker/README#L421">421</a>         there are 5 units in a window.
+<a name=L422 href="source/src/app/winmasker/README#L422">422</a> 
+<a name=L423 href="source/src/app/winmasker/README#L423">423</a> FILES
+<a name=L424 href="source/src/app/winmasker/README#L424">424</a> 
+<a name=L425 href="source/src/app/winmasker/README#L425">425</a>     This section describes the file formats that are used by
+<a name=L426 href="source/src/app/winmasker/README#L426">426</a>     WindowMasker and provides some examples (FASTA file format is not 
+<a name=L427 href="source/src/app/winmasker/README#L427">427</a>     described here).
+<a name=L428 href="source/src/app/winmasker/README#L428">428</a> 
+<a name=L429 href="source/src/app/winmasker/README#L429">429</a> 
+<a name=L430 href="source/src/app/winmasker/README#L430">430</a>     Genome in multiple FASTA files
+<a name=L431 href="source/src/app/winmasker/README#L431">431</a> 
+<a name=L432 href="source/src/app/winmasker/README#L432">432</a>     If the genome data is contained in multiple FASTA formatted
+<a name=L433 href="source/src/app/winmasker/README#L433">433</a>     files, then "-fa_list true" should be used and the value of 
+<a name=L434 href="source/src/app/winmasker/README#L434">434</a>     "-in" option should name the file containing the list of the 
+<a name=L435 href="source/src/app/winmasker/README#L435">435</a>     required FASTA files, one file per line. For example, for human 
+<a name=L436 href="source/src/app/winmasker/README#L436">436</a>     genome build 34, one could have one FASTA file per chromosome 
+<a name=L437 href="source/src/app/winmasker/README#L437">437</a>     named chrX.fa, chrY.fa, chr1.fa, chr2.fa, ..., chr22.fa located 
+<a name=L438 href="source/src/app/winmasker/README#L438">438</a>     in the /human34 directory. Then the file given to the "-in" 
+<a name=L439 href="source/src/app/winmasker/README#L439">439</a>     option should look like this:
+<a name=L440 href="source/src/app/winmasker/README#L440">440</a> 
+<a name=L441 href="source/src/app/winmasker/README#L441">441</a> /human34/chr1.fa
+<a name=L442 href="source/src/app/winmasker/README#L442">442</a> /human34/chr2.fa
+<a name=L443 href="source/src/app/winmasker/README#L443">443</a> ...
+<a name=L444 href="source/src/app/winmasker/README#L444">444</a> /human34/chr22.fa
+<a name=L445 href="source/src/app/winmasker/README#L445">445</a> /human34/chrX.fa
+<a name=L446 href="source/src/app/winmasker/README#L446">446</a> /human34/chrY.fa
+<a name=L447 href="source/src/app/winmasker/README#L447">447</a> 
+<a name=L448 href="source/src/app/winmasker/README#L448">448</a>     NOTE: Empty lines are ignored.
+<a name=L449 href="source/src/app/winmasker/README#L449">449</a> 
+<a name=L450 href="source/src/app/winmasker/README#L450">450</a> 
+<a name=L451 href="source/src/app/winmasker/README#L451">451</a>     Unit Counts
+<a name=L452 href="source/src/app/winmasker/README#L452">452</a> 
+<a name=L453 href="source/src/app/winmasker/README#L453">453</a>     This file is the output of WindowMasker Stage 1 processing if
+<a name=L454 href="source/src/app/winmasker/README#L454">454</a>     "ascii" unit counts format has been chosen.  The file is an ASCII
+<a name=L455 href="source/src/app/winmasker/README#L455">455</a>     text file. It also serves as input for Stage 2 processing. When 
+<a name=L456 href="source/src/app/winmasker/README#L456">456</a>     WindowMasker reads the unit counts file during Stage 2 empty lines 
+<a name=L457 href="source/src/app/winmasker/README#L457">457</a>     and lines starting with '#' character are ignored. This way 
+<a name=L458 href="source/src/app/winmasker/README#L458">458</a>     comments could be introduced into the unit counts file.
+<a name=L459 href="source/src/app/winmasker/README#L459">459</a> 
+<a name=L460 href="source/src/app/winmasker/README#L460">460</a>     The first line of the file contains one integer number which is 
+<a name=L461 href="source/src/app/winmasker/README#L461">461</a>     the unit size.
+<a name=L462 href="source/src/app/winmasker/README#L462">462</a> 
+<a name=L463 href="source/src/app/winmasker/README#L463">463</a>     Then come the lines containing counts for the units which
+<a name=L464 href="source/src/app/winmasker/README#L464">464</a>     appeared more than T_low times in the genome (and its reverse 
+<a name=L465 href="source/src/app/winmasker/README#L465">465</a>     complement). These are ordered by the unit numerical value. Each 
+<a name=L466 href="source/src/app/winmasker/README#L466">466</a>     line has the following structure:
+<a name=L467 href="source/src/app/winmasker/README#L467">467</a> 
+<a name=L468 href="source/src/app/winmasker/README#L468">468</a>                     UNIT_VALUE COUNT
+<a name=L469 href="source/src/app/winmasker/README#L469">469</a> 
+<a name=L470 href="source/src/app/winmasker/README#L470">470</a>     where UNIT_VALUE is an integer in hexadecimal format and COUNT is 
+<a name=L471 href="source/src/app/winmasker/README#L471">471</a>     a decimal integer.
+<a name=L472 href="source/src/app/winmasker/README#L472">472</a> 
+<a name=L473 href="source/src/app/winmasker/README#L473">473</a>     The last section of the file contains the computed values for 
+<a name=L474 href="source/src/app/winmasker/README#L474">474</a>     T_threshold, T_extend, T_low, and T_high, each on a separate line 
+<a name=L475 href="source/src/app/winmasker/README#L475">475</a>     with the following structure:
+<a name=L476 href="source/src/app/winmasker/README#L476">476</a> 
+<a name=L477 href="source/src/app/winmasker/README#L477">477</a>                     &gt;PARAM_NAME VALUE
+<a name=L478 href="source/src/app/winmasker/README#L478">478</a> 
+<a name=L479 href="source/src/app/winmasker/README#L479">479</a>     where PARAM_NAME is one of t_low, t_extend, t_threshold, t_high 
+<a name=L480 href="source/src/app/winmasker/README#L480">480</a>     and VALUE is the integer value of the corresponding parameter.
+<a name=L481 href="source/src/app/winmasker/README#L481">481</a> 
+<a name=L482 href="source/src/app/winmasker/README#L482">482</a>     For example the unit counts file for human build 34 looks like 
+<a name=L483 href="source/src/app/winmasker/README#L483">483</a>     this (only 20 lines in the beginning and 5 lines in the end are 
+<a name=L484 href="source/src/app/winmasker/README#L484">484</a>     shown):
+<a name=L485 href="source/src/app/winmasker/README#L485">485</a> 
+<a name=L486 href="source/src/app/winmasker/README#L486">486</a> 
+<a name=L487 href="source/src/app/winmasker/README#L487">487</a> 15
+<a name=L488 href="source/src/app/winmasker/README#L488">488</a> 0 154
+<a name=L489 href="source/src/app/winmasker/README#L489">489</a> 1 154
+<a name=L490 href="source/src/app/winmasker/README#L490">490</a> 2 154
+<a name=L491 href="source/src/app/winmasker/README#L491">491</a> 3 154
+<a name=L492 href="source/src/app/winmasker/README#L492">492</a> 4 154
+<a name=L493 href="source/src/app/winmasker/README#L493">493</a> &lt;...&gt;
+<a name=L494 href="source/src/app/winmasker/README#L494">494</a> 1a0 154
+<a name=L495 href="source/src/app/winmasker/README#L495">495</a> 1a1 47
+<a name=L496 href="source/src/app/winmasker/README#L496">496</a> 1a2 95
+<a name=L497 href="source/src/app/winmasker/README#L497">497</a> 1a3 64
+<a name=L498 href="source/src/app/winmasker/README#L498">498</a> 1a4 71
+<a name=L499 href="source/src/app/winmasker/README#L499">499</a> 1a5 101
+<a name=L500 href="source/src/app/winmasker/README#L500">500</a> 1a7 80
+<a name=L501 href="source/src/app/winmasker/README#L501">501</a> 1a8 101
+<a name=L502 href="source/src/app/winmasker/README#L502">502</a> 1a9 63
+<a name=L503 href="source/src/app/winmasker/README#L503">503</a> 1aa 100
+<a name=L504 href="source/src/app/winmasker/README#L504">504</a> &lt;...&gt;
+<a name=L505 href="source/src/app/winmasker/README#L505">505</a> 
+<a name=L506 href="source/src/app/winmasker/README#L506">506</a> &gt;t_low       16
+<a name=L507 href="source/src/app/winmasker/README#L507">507</a> &gt;t_extend    57
+<a name=L508 href="source/src/app/winmasker/README#L508">508</a> &gt;t_threshold 86
+<a name=L509 href="source/src/app/winmasker/README#L509">509</a> &gt;t_high      154
+<a name=L510 href="source/src/app/winmasker/README#L510">510</a> 
+<a name=L511 href="source/src/app/winmasker/README#L511">511</a>     Optimized Unit Counts
+<a name=L512 href="source/src/app/winmasker/README#L512">512</a> 
+<a name=L513 href="source/src/app/winmasker/README#L513">513</a>     This file is an output of WindowMasker Stage 1 processing when
+<a name=L514 href="source/src/app/winmasker/README#L514">514</a>     "oascii" unit counts format has been chosen. The file is also
+<a name=L515 href="source/src/app/winmasker/README#L515">515</a>     used as an input for the Stage 2 processing via "-ustat" command
+<a name=L516 href="source/src/app/winmasker/README#L516">516</a>     line option. 
+<a name=L517 href="source/src/app/winmasker/README#L517">517</a>     
+<a name=L518 href="source/src/app/winmasker/README#L518">518</a>     The first line of the file contains the number
+<a name=L519 href="source/src/app/winmasker/README#L519">519</a>     AAAA and serves as a file format identifier.
+<a name=L520 href="source/src/app/winmasker/README#L520">520</a> 
+<a name=L521 href="source/src/app/winmasker/README#L521">521</a>     The second line must contain a single integer between 1 and 16
+<a name=L522 href="source/src/app/winmasker/README#L522">522</a>     which is the unit size.
+<a name=L523 href="source/src/app/winmasker/README#L523">523</a> 
+<a name=L524 href="source/src/app/winmasker/README#L524">524</a>     The third line contains 4 integer values separated by spaces:
+<a name=L525 href="source/src/app/winmasker/README#L525">525</a> 
+<a name=L526 href="source/src/app/winmasker/README#L526">526</a>        the number of units with collisions M (32 bit integer)
+<a name=L527 href="source/src/app/winmasker/README#L527">527</a>        the hash key size (8 bit integer)
+<a name=L528 href="source/src/app/winmasker/README#L528">528</a>        the right offset r of the hash key (8 bit integer)
+<a name=L529 href="source/src/app/winmasker/README#L529">529</a>        the width w (in bits) of the field containing the number of 
+<a name=L530 href="source/src/app/winmasker/README#L530">530</a>             collisions (8 bit integer)
+<a name=L531 href="source/src/app/winmasker/README#L531">531</a> 
+<a name=L532 href="source/src/app/winmasker/README#L532">532</a>     The next 4 lines contain windowmasker thresholds, one per
+<a name=L533 href="source/src/app/winmasker/README#L533">533</a>     line in the following order:
+<a name=L534 href="source/src/app/winmasker/README#L534">534</a> 
+<a name=L535 href="source/src/app/winmasker/README#L535">535</a>     T_low
+<a name=L536 href="source/src/app/winmasker/README#L536">536</a>     T_extend
+<a name=L537 href="source/src/app/winmasker/README#L537">537</a>     T_threshold
+<a name=L538 href="source/src/app/winmasker/README#L538">538</a>     T_high
+<a name=L539 href="source/src/app/winmasker/README#L539">539</a> 
+<a name=L540 href="source/src/app/winmasker/README#L540">540</a>     Then go 2^k 32-bit integers, one per line that for the hash
+<a name=L541 href="source/src/app/winmasker/README#L541">541</a>     table. Each integer has the following form:
+<a name=L542 href="source/src/app/winmasker/README#L542">542</a> 
+<a name=L543 href="source/src/app/winmasker/README#L543">543</a>     The low order w bits contain the number c of units that have
+<a name=L544 href="source/src/app/winmasker/README#L544">544</a>     a hash key equal to the index of this integer in the table.
+<a name=L545 href="source/src/app/winmasker/README#L545">545</a> 
+<a name=L546 href="source/src/app/winmasker/README#L546">546</a>         If c = 0 then the rest of the bits are 0.
+<a name=L547 href="source/src/app/winmasker/README#L547">547</a>         If c = 1 then bits [w,23] contain the count of the uniq
+<a name=L548 href="source/src/app/winmasker/README#L548">548</a>                  unit with this hash key. Bits [24-31] contain
+<a name=L549 href="source/src/app/winmasker/README#L549">549</a>                  the bits [0,r-1] and [k + r,31] of the unit
+<a name=L550 href="source/src/app/winmasker/README#L550">550</a>                  value.
+<a name=L551 href="source/src/app/winmasker/README#L551">551</a>         If c &gt; 1 then bits [w,31] contain the index of the start
+<a name=L552 href="source/src/app/winmasker/README#L552">552</a>                  of the list of counts in the counts table (see
+<a name=L553 href="source/src/app/winmasker/README#L553">553</a>                  below) of units with this hash key.
+<a name=L554 href="source/src/app/winmasker/README#L554">554</a> 
+<a name=L555 href="source/src/app/winmasker/README#L555">555</a>     The last M lines contain 1 16-bit integer each and form the counts
+<a name=L556 href="source/src/app/winmasker/README#L556">556</a>     table. Each number has the following form:
+<a name=L557 href="source/src/app/winmasker/README#L557">557</a> 
+<a name=L558 href="source/src/app/winmasker/README#L558">558</a>         bits [0-8] - unit count;
+<a name=L559 href="source/src/app/winmasker/README#L559">559</a>         bits [9-15] are bits [0,r-1] and [k + r,31] of the
+<a name=L560 href="source/src/app/winmasker/README#L560">560</a>             corresponding unit value.
+<a name=L561 href="source/src/app/winmasker/README#L561">561</a> 
+<a name=L562 href="source/src/app/winmasker/README#L562">562</a>     Note that unit counts file in "oascii" format contains exactly
+<a name=L563 href="source/src/app/winmasker/README#L563">563</a>     10 + 2^k + M lines.
+<a name=L564 href="source/src/app/winmasker/README#L564">564</a> 
+<a name=L565 href="source/src/app/winmasker/README#L565">565</a> 
+<a name=L566 href="source/src/app/winmasker/README#L566">566</a>     List of Sequence Ids to Process
+<a name=L567 href="source/src/app/winmasker/README#L567">567</a>     List of Sequence Ids to Exclude from Processing
+<a name=L568 href="source/src/app/winmasker/README#L568">568</a> 
+<a name=L569 href="source/src/app/winmasker/README#L569">569</a>     Both files have identical format. WindowMasker uses the first 
+<a name=L570 href="source/src/app/winmasker/README#L570">570</a>     word of the sequence FASTA title (with or without the leading 
+<a name=L571 href="source/src/app/winmasker/README#L571">571</a>     '&gt;' character) as the sequence id. There should be one sequence 
+<a name=L572 href="source/src/app/winmasker/README#L572">572</a>     id per line. Below is an example of such a file.
+<a name=L573 href="source/src/app/winmasker/README#L573">573</a> 
+<a name=L574 href="source/src/app/winmasker/README#L574">574</a> gi|20349357|ref|NT_033777.1|
+<a name=L575 href="source/src/app/winmasker/README#L575">575</a> &gt;gi|20340552|ref|NT_033778.1|
+<a name=L576 href="source/src/app/winmasker/README#L576">576</a> 
+<a name=L577 href="source/src/app/winmasker/README#L577">577</a> 
+<a name=L578 href="source/src/app/winmasker/README#L578">578</a>     WindowMasker Interval Output Format
+<a name=L579 href="source/src/app/winmasker/README#L579">579</a> 
+<a name=L580 href="source/src/app/winmasker/README#L580">580</a>     By default the output of WindowMasker Stage 2 is in Interval
+<a name=L581 href="source/src/app/winmasker/README#L581">581</a>     format ("-outfmt interval"). The file is an ASCII text file
+<a name=L582 href="source/src/app/winmasker/README#L582">582</a>     consisting of blocks of information for each input sequence in 
+<a name=L583 href="source/src/app/winmasker/README#L583">583</a>     the order those sequences appear in the input FASTA file.  Each 
+<a name=L584 href="source/src/app/winmasker/README#L584">584</a>     block starts with the FASTA title of the sequence followed by the 
+<a name=L585 href="source/src/app/winmasker/README#L585">585</a>     description of masked intervals, one interval per line. The 
+<a name=L586 href="source/src/app/winmasker/README#L586">586</a>     intervals do not overlap and are sorted by their start position. 
+<a name=L587 href="source/src/app/winmasker/README#L587">587</a>     (NOTE: the positions are numbered starting at 0.) Each line 
+<a name=L588 href="source/src/app/winmasker/README#L588">588</a>     describing a masked interval has the following structure:
+<a name=L589 href="source/src/app/winmasker/README#L589">589</a> 
+<a name=L590 href="source/src/app/winmasker/README#L590">590</a>                         START - END
+<a name=L591 href="source/src/app/winmasker/README#L591">591</a> 
+<a name=L592 href="source/src/app/winmasker/README#L592">592</a>     where START and END are decimal integers representing the end 
+<a name=L593 href="source/src/app/winmasker/README#L593">593</a>     points of the masked interval. Below is sample part of 
+<a name=L594 href="source/src/app/winmasker/README#L594">594</a>     WindowMasker output in interval format:
+<a name=L595 href="source/src/app/winmasker/README#L595">595</a> 
+<a name=L596 href="source/src/app/winmasker/README#L596">596</a> &gt;AC084726.10.8677.10816
+<a name=L597 href="source/src/app/winmasker/README#L597">597</a> 2 - 27
+<a name=L598 href="source/src/app/winmasker/README#L598">598</a> 45 - 63
+<a name=L599 href="source/src/app/winmasker/README#L599">599</a> 75 - 103
+<a name=L600 href="source/src/app/winmasker/README#L600">600</a> 144 - 191
+<a name=L601 href="source/src/app/winmasker/README#L601">601</a> 201 - 222
+<a name=L602 href="source/src/app/winmasker/README#L602">602</a> 266 - 308
+<a name=L603 href="source/src/app/winmasker/README#L603">603</a> 324 - 355
+<a name=L604 href="source/src/app/winmasker/README#L604">604</a> 398 - 426
+<a name=L605 href="source/src/app/winmasker/README#L605">605</a> 446 - 468
+<a name=L606 href="source/src/app/winmasker/README#L606">606</a> 569 - 628
+<a name=L607 href="source/src/app/winmasker/README#L607">607</a> 647 - 676
+<a name=L608 href="source/src/app/winmasker/README#L608">608</a> 711 - 774
+<a name=L609 href="source/src/app/winmasker/README#L609">609</a> 815 - 865
+<a name=L610 href="source/src/app/winmasker/README#L610">610</a> 897 - 924
+<a name=L611 href="source/src/app/winmasker/README#L611">611</a> 961 - 1004
+<a name=L612 href="source/src/app/winmasker/README#L612">612</a> 1039 - 1126
+<a name=L613 href="source/src/app/winmasker/README#L613">613</a> 1212 - 1261
+<a name=L614 href="source/src/app/winmasker/README#L614">614</a> 1285 - 1310
+<a name=L615 href="source/src/app/winmasker/README#L615">615</a> 1367 - 1473
+<a name=L616 href="source/src/app/winmasker/README#L616">616</a> 1479 - 1509
+<a name=L617 href="source/src/app/winmasker/README#L617">617</a> 1521 - 1600
+<a name=L618 href="source/src/app/winmasker/README#L618">618</a> 1626 - 1673
+<a name=L619 href="source/src/app/winmasker/README#L619">619</a> 1683 - 1757
+<a name=L620 href="source/src/app/winmasker/README#L620">620</a> 1766 - 1809
+<a name=L621 href="source/src/app/winmasker/README#L621">621</a> 1817 - 1948
+<a name=L622 href="source/src/app/winmasker/README#L622">622</a> 1956 - 2013
+<a name=L623 href="source/src/app/winmasker/README#L623">623</a> 2026 - 2052
+<a name=L624 href="source/src/app/winmasker/README#L624">624</a> 2082 - 2139
+<a name=L625 href="source/src/app/winmasker/README#L625">625</a> &gt;AC084726.10.16360.16465
+<a name=L626 href="source/src/app/winmasker/README#L626">626</a> &gt;AC084726.10.17911.20089
+<a name=L627 href="source/src/app/winmasker/README#L627">627</a> 10 - 147
+<a name=L628 href="source/src/app/winmasker/README#L628">628</a> 240 - 293
+<a name=L629 href="source/src/app/winmasker/README#L629">629</a> 365 - 444
+<a name=L630 href="source/src/app/winmasker/README#L630">630</a> 460 - 589
+<a name=L631 href="source/src/app/winmasker/README#L631">631</a> 627 - 654
+<a name=L632 href="source/src/app/winmasker/README#L632">632</a> 682 - 712
+<a name=L633 href="source/src/app/winmasker/README#L633">633</a> 756 - 786
+<a name=L634 href="source/src/app/winmasker/README#L634">634</a> 827 - 845
+<a name=L635 href="source/src/app/winmasker/README#L635">635</a> 903 - 928
+<a name=L636 href="source/src/app/winmasker/README#L636">636</a> 950 - 978
+<a name=L637 href="source/src/app/winmasker/README#L637">637</a> 1060 - 1199
+<a name=L638 href="source/src/app/winmasker/README#L638">638</a> 1225 - 1340
+<a name=L639 href="source/src/app/winmasker/README#L639">639</a> 1369 - 1397
+<a name=L640 href="source/src/app/winmasker/README#L640">640</a> 1443 - 1464
+<a name=L641 href="source/src/app/winmasker/README#L641">641</a> 1482 - 1600
+<a name=L642 href="source/src/app/winmasker/README#L642">642</a> 1703 - 1726
+<a name=L643 href="source/src/app/winmasker/README#L643">643</a> 1747 - 1775
+<a name=L644 href="source/src/app/winmasker/README#L644">644</a> 1823 - 1872
+<a name=L645 href="source/src/app/winmasker/README#L645">645</a> 1904 - 1974
+<a name=L646 href="source/src/app/winmasker/README#L646">646</a> 1982 - 2006
+<a name=L647 href="source/src/app/winmasker/README#L647">647</a> 2064 - 2084
+<a name=L648 href="source/src/app/winmasker/README#L648">648</a> 2099 - 2167
+<a name=L649 href="source/src/app/winmasker/README#L649">649</a> 
+<a name=L650 href="source/src/app/winmasker/README#L650">650</a> 
+<a name=L651 href="source/src/app/winmasker/README#L651">651</a> SAMPLE WINDOWMASKER SESSION
+<a name=L652 href="source/src/app/winmasker/README#L652">652</a> 
+<a name=L653 href="source/src/app/winmasker/README#L653">653</a>     Assuming the list of genome files for human build 34 are in the 
+<a name=L654 href="source/src/app/winmasker/README#L654">654</a>     file ./fa_list the following command will run the first stage of 
+<a name=L655 href="source/src/app/winmasker/README#L655">655</a>     WindowMasker. Checking for duplicates is requested, so all 
+<a name=L656 href="source/src/app/winmasker/README#L656">656</a>     candidates for duplicates will be reported on standard error 
+<a name=L657 href="source/src/app/winmasker/README#L657">657</a>     (stderr). The possible duplicates reported below turn out to be 
+<a name=L658 href="source/src/app/winmasker/README#L658">658</a>     false positives. During Stage 1, WindowMasker also shows the 
+<a name=L659 href="source/src/app/winmasker/README#L659">659</a>     progress by printing dots to standard error (stderr).
+<a name=L660 href="source/src/app/winmasker/README#L660">660</a> 
+<a name=L661 href="source/src/app/winmasker/README#L661">661</a> 
+<a name=L662 href="source/src/app/winmasker/README#L662">662</a> ./windowmasker -mk_counts -fa_list true -in fa_list -checkdup true -out ustat.15
+<a name=L663 href="source/src/app/winmasker/README#L663">663</a> Possible duplication of sequences:
+<a name=L664 href="source/src/app/winmasker/README#L664">664</a> subject: lcl|Hs1_27103_34 and query: lcl|Hs1_33153_34
+<a name=L665 href="source/src/app/winmasker/README#L665">665</a> at intervals
+<a name=L666 href="source/src/app/winmasker/README#L666">666</a> subject: 5539 --- 35539
+<a name=L667 href="source/src/app/winmasker/README#L667">667</a> query  : 36748455 --- 36778455
+<a name=L668 href="source/src/app/winmasker/README#L668">668</a> 
+<a name=L669 href="source/src/app/winmasker/README#L669">669</a> Possible duplication of sequences:
+<a name=L670 href="source/src/app/winmasker/README#L670">670</a> subject: lcl|Hs1_78005_34 and query: lcl|Hs1_78000_34
+<a name=L671 href="source/src/app/winmasker/README#L671">671</a> at intervals
+<a name=L672 href="source/src/app/winmasker/README#L672">672</a> subject: 173111 --- 233111
+<a name=L673 href="source/src/app/winmasker/README#L673">673</a> query  : 26192 --- 86192
+<a name=L674 href="source/src/app/winmasker/README#L674">674</a> 
+<a name=L675 href="source/src/app/winmasker/README#L675">675</a> &lt;...MANY MESSAGES SKIPPED...&gt;
+<a name=L676 href="source/src/app/winmasker/README#L676">676</a> 
+<a name=L677 href="source/src/app/winmasker/README#L677">677</a> Computing the genome length........................done.
+<a name=L678 href="source/src/app/winmasker/README#L678">678</a> Pass 1................................................................................................
+<a name=L679 href="source/src/app/winmasker/README#L679">679</a> Pass 2................................................................................................
+<a name=L680 href="source/src/app/winmasker/README#L680">680</a>     
+<a name=L681 href="source/src/app/winmasker/README#L681">681</a> 
+<a name=L682 href="source/src/app/winmasker/README#L682">682</a>     At this point file ustat.15 contains the unit counts
+<a name=L683 href="source/src/app/winmasker/README#L683">683</a>     that can be used in Stage 2.
+<a name=L684 href="source/src/app/winmasker/README#L684">684</a> 
+<a name=L685 href="source/src/app/winmasker/README#L685">685</a>     To mask the first human chromosome applying both WinMask
+<a name=L686 href="source/src/app/winmasker/README#L686">686</a>     and symmetric DUST, the following command can be used assuming 
+<a name=L687 href="source/src/app/winmasker/README#L687">687</a>     chr1.fa is in the current directory. During Stage 2 no 
+<a name=L688 href="source/src/app/winmasker/README#L688">688</a>     progress information is printed on standard error (stderr).
+<a name=L689 href="source/src/app/winmasker/README#L689">689</a> 
+<a name=L690 href="source/src/app/winmasker/README#L690">690</a> 
+<a name=L691 href="source/src/app/winmasker/README#L691">691</a> ./windowmasker -ustat ustat.15 -in chr1.fa -out chr1.wm -dust true
+<a name=L692 href="source/src/app/winmasker/README#L692">692</a> 
+<a name=L693 href="source/src/app/winmasker/README#L693">693</a> 
+<a name=L694 href="source/src/app/winmasker/README#L694">694</a>     The output in the interval format is written to chr1.wm.
+<a name=L695 href="source/src/app/winmasker/README#L695">695</a> 
+</pre><hr>
+<div align=center>
+   [&nbsp;<b><i>source navigation</i></b>&nbsp;]&nbsp;&nbsp;  [&nbsp;<a href="diff/src/app/winmasker/README">diff markup</a>&nbsp;]&nbsp;&nbsp;  [&nbsp;<a href="ident">identifier search</a>&nbsp;]&nbsp;&nbsp;  [&nbsp;<a href="search">freetext search</a>&nbsp;]&nbsp;&nbsp;  [&nbsp;<a href="find">file search</a>&nbsp;]&nbsp;&nbsp; 
+</div>
+
+<hr>
+<table width="100%" cellpadding=0 border=0>
+  <tr>
+
+  </tr>
+  <tr>
+    <td align=left>
+      This page was automatically generated by the 
+      <a href="blurb.html">LXR engine</a>.
+      <br>
+      Visit the <a href="http://lxr.linux.no/">LXR main site</a> for more
+      information.
+    </td>
+<!--
+    <td align=right>
+      <a href="http://validator.w3.org/check?uri=http://www.ncbi.nlm.nih.gov:80/IEB/ToolBox/CPP_DOC/lxr/source/src/app/winmasker/README%3f"><img src="vh40.gif" border=0 alt="HTML 3.2 Checked!"></a>
+    </td>
+-->
+  </tr>
+</table>
+
+</body>
+</html>

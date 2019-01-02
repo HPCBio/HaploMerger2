@@ -1,0 +1,49 @@
+
+
+========== Start at 2016年 11月 30日 星期三 17:27:44 CST
+../bin/faDnaPolishing.pl --legalizing --noLeadingN --removeShortSeq=500
+
+
+--legalizing=1 .
+--maskShortPortion=0 .
+--noLeadingN=1 .
+--removeShortSeq=500 .
+>Sc0000000: finished.
+>Sc0000001: finished.
+>Sc0000002: ending nN found; finished.
+
+
+========== Time used = 0 seconds or 0 hours.
+
+
+
+========== Start at 2016年 11月 30日 星期三 17:27:44 CST
+../bin/faDnaPolishing.pl --legalizing --noLeadingN --removeShortSeq=500
+
+
+--legalizing=1 .
+--maskShortPortion=0 .
+--noLeadingN=1 .
+--removeShortSeq=500 .
+>Sc0000000: finished.
+>Sc0000001: finished.
+>Sc0000002: ending nN found; finished.
+
+
+========== Time used = 0 seconds or 0 hours.
+
+
+
+========== Start at 2016年 11月 30日 星期三 17:27:44 CST
+../bin/faDnaPolishing.pl --legalizing --noLeadingN --removeShortSeq=500
+
+
+--legalizing=1 .
+--maskShortPortion=0 .
+--noLeadingN=1 .
+--removeShortSeq=500 .
+>xfSc0000000: finished.
+
+
+========== Time used = 0 seconds or 0 hours.
+

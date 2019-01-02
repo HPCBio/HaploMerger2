@@ -1,0 +1,34 @@
+
+
+========== Start at 2016年 11月 30日 星期三 17:23:35 CST
+../bin/initiation.pl --faSplit --faToNib --faSize --Species unpaired optiNewScaffolds --Force --Delete
+
+Set to OVER-WRITING mode!
+Species included:  unpaired optiNewScaffolds 
+====faSize started!====
+checking existing sizes files ...
+====faSize done!====
+
+====faSplit started!====
+Checking existing directories ... 
+NOTE that sequence without name is not allowed in unpaired.fa.gz ! Splitting ... 
+unpaired.fa.gz has been splitted into unpaired.seq.fa/
+NOTE that sequence without name is not allowed in optiNewScaffolds.fa.gz ! Splitting ... 
+optiNewScaffolds.fa.gz has been splitted into optiNewScaffolds.seq.fa/
+====faSplit done!====
+
+====faToNib started!====
+Checking existing directories ... 
+converting the fa files to nib files ...
+Converting directory unpaired.seq.fa/*.fa to unpaired.seq/*.nib ...
+Writing 6776 bases in 3396 bytes
+Converting directory optiNewScaffolds.seq.fa/*.fa to optiNewScaffolds.seq/*.nib ...
+Writing 31600 bases in 15808 bytes
+Writing 26200 bases in 13108 bytes
+Writing 5550 bases in 2783 bytes
+====faToNib done!====
+
+
+
+========== Time used =  0  seconds or  0  hours.
+

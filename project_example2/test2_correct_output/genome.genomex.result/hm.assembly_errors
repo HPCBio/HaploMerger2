@@ -1,0 +1,17 @@
+# You may open this file in excel.
+# This table shows the potential assembly errors (mis-joins).
+# Nodes (alignment) with score or ali_len < 1250000 are not output.
+# Sides with at least one overhang shorter than 12500 basepairs are not output.
+
+# You may manually set the breakpoint in the *breakpoint_setting column:
+#  0=no manual editing, 
+#  1=choose to break the joining point on the target scaffold (tsc), 
+#  2=choose to break the joining point on the query  scaffold (qsc).
+#  3=choose to break both joining points on the target and query  scaffold (tsc/qsc).
+
+# After editing or updating, this file may be saved as hm.assembly_errors_edited or other names
+# in case being overwritten by another invocation of  HM_pathFinder.pl.
+
+# Column ali_len_or_score shows the alignment score.
+
+#node_id	tsc_ali_len	ali_len_or_score	direction(5or3)	tsc_name	tsc_size	tsc_strand	ali_start_of_tsc	ali_end_of_tsc	joining_point_of_tsc	overhang_len_of_tsc	qsc_name	qsc_size	qsc_strand	ali_start_of_qsc	ali_end_of_qsc	joining_point_of_qsc	overhang_len_of_qsc	*tsc_breakpoint	*qsc_breakpoint	*breakpoint_setting

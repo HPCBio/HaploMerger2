@@ -1,0 +1,47 @@
+
+
+========== Start at 2016年 11月 30日 星期三 17:23:36 CST
+../bin/HM_axtChainRecipBestNet.pl --rbestNet --axtChain --tbest --threads=1 --linearGap=medium --minScore=10000 --minSpace=200 --minScore2=20000 --Species unpaired optiNewScaffolds --Force --Delete
+
+Set to OVER-WRITING mode!
+Species included:  unpaired optiNewScaffolds 
+Thread number for axtChain is set to ... 1 !
+=== axtChain start ===
+Checking missing sizes files ...
+checking nib files in unpaired.seq/ ...
+checking nib files in optiNewScaffolds.seq/ ...
+checking chain file unpaired.optiNewScaffolds.result/all.chain.gz ...
+Thread_ID 1:  axtChain -linearGap=medium -minScore=10000 -verbose=0  -scoreScheme=scoreMatrix.q  unpaired.optiNewScaffolds.result/raw.axt/HM_all_lastz_target_82235_00.fa.axt unpaired.seq optiNewScaffolds.seq /dev/stdout  | chainAntiRepeat unpaired.seq optiNewScaffolds.seq /dev/stdin unpaired.optiNewScaffolds.result/raw.axt/HM_all_lastz_target_82235_00.fa.axt.chain  
+chainMergeSort unpaired.optiNewScaffolds.result/raw.axt/*.axt.chain | gzip -c >unpaired.optiNewScaffolds.result/all.chain.gz 
+=== axtChain done! ===
+
+=== rbestNet start ===
+--minScore2 is set to 20000.
+--minSpace is set to 200.
+Checking missing sizes files ...
+checking chain.gz files ...
+unpaired.optiNewScaffolds.result/all.chain.gz 
+checking the net file and if present, produce the corresponding chain file ...
+checking old rbest.net/chain.gz and qrbest.net/chain.gz file ...
+creating unpaired.optiNewScaffolds.all.tbest.net and chain ...
+gunzip -c unpaired.optiNewScaffolds.result/all.chain.gz | chainPreNet /dev/stdin unpaired.sizes optiNewScaffolds.sizes /dev/stdout 2>>unpaired.optiNewScaffolds.result/_ChainPreNet.log | chainNet -minSpace=200 -minScore=20000 /dev/stdin unpaired.sizes optiNewScaffolds.sizes /dev/stdout /dev/null 2>>unpaired.optiNewScaffolds.result/_ChainNet.log | netSyntenic /dev/stdin unpaired.optiNewScaffolds.result/unpaired.optiNewScaffolds.all.tbest.net 2>>unpaired.optiNewScaffolds.result/_netSyntenic.log 
+gunzip -c unpaired.optiNewScaffolds.result/all.chain.gz | netChainSubset unpaired.optiNewScaffolds.result/unpaired.optiNewScaffolds.all.tbest.net /dev/stdin /dev/stdout 2>>unpaired.optiNewScaffolds.result/_netChainSubset.log | chainStitchId /dev/stdin unpaired.optiNewScaffolds.result/unpaired.optiNewScaffolds.all.tbest.chain 2>>unpaired.optiNewScaffolds.result/_ChainStitchId.log 
+creating all.rbest.net.gz ... 
+chainSwap unpaired.optiNewScaffolds.result/unpaired.optiNewScaffolds.all.tbest.chain /dev/stdout 2>>unpaired.optiNewScaffolds.result/_ChainSwap.log| chainSort /dev/stdin unpaired.optiNewScaffolds.result/optiNewScaffolds.unpaired.all.tbest.chain 2>>unpaired.optiNewScaffolds.result/_ChainSort.log 
+chainPreNet unpaired.optiNewScaffolds.result/optiNewScaffolds.unpaired.all.tbest.chain optiNewScaffolds.sizes unpaired.sizes /dev/stdout 2>>unpaired.optiNewScaffolds.result/_ChainPreNet.log | chainNet -minSpace=200 -minScore=20000 /dev/stdin optiNewScaffolds.sizes unpaired.sizes /dev/stdout /dev/null 2>>unpaired.optiNewScaffolds.result/_ChainNet.log | netSyntenic /dev/stdin unpaired.optiNewScaffolds.result/optiNewScaffolds.unpaired.all.rbest.net 2>>unpaired.optiNewScaffolds.result/_netSyntenic.log 
+netChainSubset unpaired.optiNewScaffolds.result/optiNewScaffolds.unpaired.all.rbest.net unpaired.optiNewScaffolds.result/optiNewScaffolds.unpaired.all.tbest.chain /dev/stdout 2>>unpaired.optiNewScaffolds.result/_netChainSubset.log | chainStitchId /dev/stdin unpaired.optiNewScaffolds.result/optiNewScaffolds.unpaired.all.rbest.chain 2>>unpaired.optiNewScaffolds.result/_ChainStitchId.log 
+chainSwap unpaired.optiNewScaffolds.result/optiNewScaffolds.unpaired.all.rbest.chain /dev/stdout 2>>unpaired.optiNewScaffolds.result/_ChainSwap.log | chainSort /dev/stdin unpaired.optiNewScaffolds.result/unpaired.optiNewScaffolds.all.rbest.chain 2>>unpaired.optiNewScaffolds.result/_ChainSort.log 
+chainPreNet unpaired.optiNewScaffolds.result/unpaired.optiNewScaffolds.all.rbest.chain unpaired.sizes optiNewScaffolds.sizes /dev/stdout 2>>unpaired.optiNewScaffolds.result/_ChainPreNet.log | chainNet -minSpace=200 -minScore=20000 /dev/stdin unpaired.sizes optiNewScaffolds.sizes /dev/stdout /dev/null 2>>unpaired.optiNewScaffolds.result/_ChainNet.log | netSyntenic /dev/stdin unpaired.optiNewScaffolds.result/unpaired.optiNewScaffolds.all.rbest.net 2>>unpaired.optiNewScaffolds.result/_netSyntenic.log  
+netToAxt -maxGap=99999999 unpaired.optiNewScaffolds.result/unpaired.optiNewScaffolds.all.rbest.net unpaired.optiNewScaffolds.result/unpaired.optiNewScaffolds.all.rbest.chain unpaired.seq optiNewScaffolds.seq unpaired.optiNewScaffolds.result/unpaired.optiNewScaffolds.all.rbest.axt 
+axtChain -linearGap=medium -minScore=0  -verbose=0  -scoreScheme=scoreMatrix.q  unpaired.optiNewScaffolds.result/unpaired.optiNewScaffolds.all.rbest.axt unpaired.seq optiNewScaffolds.seq  /dev/stdout | gzip -c > unpaired.optiNewScaffolds.result/all.rbest.chain.gz 
+gunzip -c unpaired.optiNewScaffolds.result/all.rbest.chain.gz | chainPreNet /dev/stdin unpaired.sizes optiNewScaffolds.sizes /dev/stdout 2>>unpaired.optiNewScaffolds.result/_ChainPreNet.log | chainNet -minSpace=200 -minScore=20000 /dev/stdin unpaired.sizes optiNewScaffolds.sizes /dev/stdout /dev/null 2>>unpaired.optiNewScaffolds.result/_ChainNet.log | netSyntenic /dev/stdin unpaired.optiNewScaffolds.result/all.rbest.net 2>>unpaired.optiNewScaffolds.result/_netSyntenic.log 
+reciprocal-best unpaired-reference chain file unpaired.optiNewScaffolds.result/all.rbest.chain.gz created!
+reciprocal-best unpaired-reference net file unpaired.optiNewScaffolds.result/all.rbest.net created!
+Save all.tbest.net and all.tbest.chain.gz ...
+Deleting imtermediate net and chain files ... 
+=== rbestNet done! ===
+
+
+
+========== Time used =  2  seconds or  0.000555555555555556  hours.
+

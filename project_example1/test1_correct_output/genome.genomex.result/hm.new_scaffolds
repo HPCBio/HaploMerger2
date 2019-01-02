@@ -1,0 +1,33 @@
+# You may open this file in excel.
+# connection=-1/-2: not alignment portion
+# connection=0: regular alignment portion
+# connection=1:  alignment portion can be used to join two scaffolds
+# You may manually change the value of two columns: *active_portion_manual and *connection_manual.
+# *active_portion_manual (overiding active_portion_updated):
+#    0   = no manual setting, 
+#    1(2)= force to select the portion 1(2) which you want to include in the new assembly.
+# *connection_manual (overiding connection_updated): 
+#    0    = no manual setting, 
+#    1(-1)= force (not) to use the connection to join two scaffolds.
+
+# After editing or updating, this file may be saved as hm.new_scaffolds_edited or other names
+# in case being overwritten by another invocation of  HM_pathFinder.pl.
+
+# This table is created by using mis-join breaking mode 2 .
+
+#scaffold_id	scaffold_len	sub_scaffold_id	new_portion_id	active_portion	old_scaffold1_name	old_scaffold1_size	old_scaffold1_id	start1	end1	strand1	len1	old_scaffold2_name	old_scaffold1_size	old_scaffold2_id	start2	end2	strand2	len2	connection	score	sc_Ns%	tsc_LCs%	qsc_Ns%	qsc_LCs%	active_portion_updated	connection_updated	*active_portion_manual	*connection_manual
+2	31600	0	0	1	sc_A	10500	2	0	6550	1	6550	0	0	0	0	0	0	0	-2	0	-1	-1	-1	-1	0	0	0	0
+2	31600	0	1	1	sc_A	10500	2	6550	10500	1	3950	sc_B	10350	3	0	3950	1	3950	1	357064	0	9.85	0	9.85	0	0	0	0
+2	31600	1	0	2	0	0	0	0	0	0	0	sc_B	10350	3	3950	7200	1	3250	-1	0	-1	-1	-1	-1	0	0	0	0
+2	31600	2	0	1	sc_D	18450	0	3850	7000	1	3150	sc_B	10350	3	7200	10350	1	3150	1	286744	0	8.16	0	8.16	0	0	0	0
+2	31600	2	1	1	sc_D	18450	0	7000	15350	1	8350	0	0	0	0	0	0	0	-2	0	-1	-1	-1	-1	0	0	0	0
+2	31600	2	2	1	sc_D	18450	0	15350	18450	1	3100	sc_H	6350	7	0	3100	1	3100	1	280848	0	0	0	0	0	0	0	0
+2	31600	3	0	2	0	0	0	0	0	0	0	sc_H	6350	7	3100	6350	1	3250	-1	0	-1	-1	-1	-1	0	0	0	0
+1	26200	0	0	2	0	0	0	0	0	0	0	sc_E	7250	5	0	3800	1	3800	-1	0	-1	-1	-1	-1	0	0	0	0
+1	26200	1	0	1	sc_F	17250	1	0	3450	1	3450	sc_E	7250	5	3800	7250	1	3450	1	310600	0	11.65	0	11.65	0	0	0	0
+1	26200	1	1	1	sc_F	17250	1	3450	13600	1	10150	0	0	0	0	0	0	0	-2	0	-1	-1	-1	-1	0	0	0	0
+1	26200	1	2	1	sc_F	17250	1	13600	17250	1	3650	sc_G	8800	4	0	3650	1	3650	1	331096	0	26.63	0	26.63	0	0	0	0
+1	26200	2	0	2	0	0	0	0	0	0	0	sc_G	8800	4	3650	8800	1	5150	-1	0	-1	-1	-1	-1	0	0	0	0
+0	5600	0	0	2	0	0	0	0	0	0	0	sc_C	5000	8	0	1750	1	1750	-1	0	-1	-1	-1	-1	0	0	0	0
+0	5600	0	1	2	sc_D	18450	0	0	3250	1	3250	sc_C	5000	8	1750	5000	1	3250	1	296072	0	0	0	0	0	0	0	0
+0	5600	1	0	1	sc_D	18450	0	3250	3850	1	600	0	0	0	0	0	0	0	-2	0	-1	-1	-1	-1	0	0	0	0

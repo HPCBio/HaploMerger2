@@ -1,0 +1,13 @@
+# You may manually change the value of the last column: *connection_manual:
+# 0 = no manual setting, >0(<0) = force (not) to use the connection.
+
+# After editing or updating, this file may be saved as hm.connections_edited or other names
+# in case being overwritten by another invocation of  HM_haploMerger.pl.
+
+#new_scaffold_id	sub_id	portion_id	new_scaffold_name	new_scaffold_position_start	new_scaffold_position_end	target_old_scaffold_name	target_old_scaffold_postion_start	target_old_scaffold_postion_end	query_old_scaffold_name	query_old_scaffold_postion_start	query_old_scaffold_postion_end	connection	score	tsc_Ns%	tsc_LCs%	qsc_Ns%	qsc_LCs%	connection_updated	*connection_manual
+0	0	1	Sc0000002	1750	5000	sc_D	0	3250	sc_C	1750	5000	9	296072	0	0	0	0	0	0
+1	1	0	Sc0000001	3800	7250	sc_F	0	3450	sc_E	3800	7250	9	310600	0	11.65	0	11.65	0	0
+1	1	2	Sc0000001	17400	21050	sc_F	13600	17250	sc_G	0	3650	9	331096	0	26.63	0	26.63	0	0
+2	0	1	Sc0000000	6550	10500	sc_A	6550	10500	sc_B	0	3950	9	357064	0	9.85	0	9.85	0	0
+2	2	0	Sc0000000	13750	16900	sc_D	3850	7000	sc_B	7200	10350	9	286744	0	8.16	0	8.16	0	0
+2	2	2	Sc0000000	25250	28350	sc_D	15350	18450	sc_H	0	3100	9	280848	0	0	0	0	0	0

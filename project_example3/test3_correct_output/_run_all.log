@@ -1,0 +1,254 @@
+/db3/HaploMerger2_20161129/bin:/db3/HaploMerger2_20161129/chainNet_jksrc20100603_centOS6:/db3/HaploMerger2_20161129/lastz_1.02.00_centOS6:/db3/HaploMerger2_20161129/gapCloser_v1.12:/db3/HaploMerger2_20161129/SSPACE-STANDARD-3.0_linux-x86_64:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/hsf/.local/bin:/home/hsf/bin
+
+>>> Running command : ./hm.batchA1.initiation_and_all_lastz bbv18wm
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+These files/directories are going to be output :
+  bbv18wmx.fa.gz - a copy of the genome sequence file bbv18wm.fa(.gz)
+  bbv18wm.sizes - the size of each scaffold sequences
+  bbv18wmx.sizes - the size of each scaffold sequences
+  bbv18wm.seq/*.fa and *.nib - fasta files and nib files for scaffold sequences
+  bbv18wmx.seq/*.fa and *.nib - fasta files and nib files for scaffold sequences
+  *** bbv18wm.bbv18wmx.result/raw.axt/*.axt, *.axt.*, and *.log - raw lastz result files and their log files
+log files:
+  _A1.initiation.log - log file
+  _A1.all_lastz.log - log file
+
+
+>>> Running command : ./hm.batchA2.chainNet_and_netToMaf bbv18wm
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+These files/directories are going to be output :
+  bbv18wm.bbv18wmx.result/all.chain.gz - raw chain file, gzip compressed
+  bbv18wm.bbv18wmx.result/all.tbest.chain.gz - target-best chain file
+  bbv18wm.bbv18wmx.result/all.tbest.net - target-best net file
+  *** bbv18wm.bbv18wmx.result/all.rbest.chain.gz - reciprocal best chain file, gzip compressed
+  *** bbv18wm.bbv18wmx.result/all.rbest.net.gz - reciprocal best net file, gzip compressed
+  *** bbv18wm.bbv18wmx.result/zeroMinSpace.rbest.net.gz - the zeroMinSpace net file
+log files:
+  bbv18wm.bbv18wmx.result/*.log - log files for HM_axtChainRecipBestNet.pl
+  _A2.axtChainRecipBestNet.log - log file
+
+*** NOTE THAT you may delete the directory
+*** bbv18wm.bbv18wmx.result/raw.axt after having sucessfully finished this script!
+
+
+***********************************************************************************
+*** NOTE THAT if this script finished sucessfully, you can delete the directory 
+*** bbv18wm.bbv18wmx.result/raw.axt to save tens of gigabases' disk space !
+***********************************************************************************
+
+
+>>> Running command : ./hm.batchA3.misjoin_processing bbv18wm
+
+These files/directories are going to be output :
+from HM_pathFinder_preparation.pl :
+  bbv18wm.bbv18wmx.result/hm.scaffolds - information of original scaffolds
+  bbv18wm.bbv18wmx.result/hm.nodes - information of the alignment blocks (a block is a node)
+  bbv18wm.bbv18wmx.result/hm.portions - information of the partions of original scaffolds
+from HM_pathFinder.pl :
+  *** bbv18wm.bbv18wmx.result/hm.new_scaffolds - the solved relations between two haplotypic scaffolds
+  *** bbv18wm.bbv18wmx.result/hm.assembly_errors - potential assembly errors in the original assembly
+  bbv18wm.bbv18wmx.result/hm.unpaired - a list of the unpaired scaffolds
+from XHM_remove_misjoin_scf.pl :
+  *** bbv18wm_A.fa.gz - the new diploid scaffolds with misjoins removed
+log files:
+  _A3.pathFinder_preparation.log
+  _A3.pathFinder.log
+  _A3.misjoin_processing.log
+
+
+>>> Running command : ./hm.batchB1.initiation_and_all_lastz bbv18wm_A
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+These files/directories are going to be output :
+  bbv18wm_Ax.fa.gz - a copy of the genome sequence file bbv18wm_A.fa(.gz)
+  bbv18wm_A.sizes - the size of each scaffold sequences
+  bbv18wm_Ax.sizes - the size of each scaffold sequences
+  bbv18wm_A.seq/*.fa and *.nib - fasta files and nib files for scaffold sequences
+  bbv18wm_Ax.seq/*.fa and *.nib - fasta files and nib files for scaffold sequences
+  *** bbv18wm_A.bbv18wm_Ax.result/raw.axt/*.axt, *.axt.*, and *.log - raw lastz result files and their log files
+log files:
+  _B1.initiation.log - log file
+  _B1.all_lastz.log - log file
+
+
+>>> Running command : ./hm.batchB2.chainNet_and_netToMaf bbv18wm_A
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+These files/directories are going to be output :
+  bbv18wm_A.bbv18wm_Ax.result/all.chain.gz - raw chain file, gzip compressed
+  bbv18wm_A.bbv18wm_Ax.result/all.tbest.chain.gz - target-best chain file
+  bbv18wm_A.bbv18wm_Ax.result/all.tbest.net - target-best net file
+  *** bbv18wm_A.bbv18wm_Ax.result/all.rbest.chain.gz - reciprocal best chain file, gzip compressed
+  *** bbv18wm_A.bbv18wm_Ax.result/all.rbest.net.gz - reciprocal best net file, gzip compressed
+  *** bbv18wm_A.bbv18wm_Ax.result/zeroMinSpace.rbest.net.gz - the zeroMinSpace net file
+  *** bbv18wm_A.bbv18wm_Ax.result/mafFiltered.net.gz - the net file for mafFiltered.net.maf.gz
+  *** bbv18wm_A.bbv18wm_Ax.result/mafFiltered.net.maf.gz - maf alignments, all scaffolds in one file, deleted
+  *** bbv18wm_A.bbv18wm_Ax.result/mafFiltered.net.maf.tar.gz - maf alignments, one file per scaffold, for viewing
+log files:
+  bbv18wm_A.bbv18wm_Ax.result/*.log - log files for HM_axtChainRecipBestNet.pl
+  _B2.axtChainRecipBestNet.log - log file
+  _B2.netToMaf.log - log file
+
+*** NOTE THAT you may delete the directory
+*** bbv18wm_A.bbv18wm_Ax.result/raw.axt after having sucessfully finished this script!
+
+
+***********************************************************************************
+*** NOTE THAT if this script finished sucessfully, you can delete the directory 
+*** bbv18wm_A.bbv18wm_Ax.result/raw.axt to save tens of gigabases' disk space !
+***********************************************************************************
+
+
+>>> Running command : ./hm.batchB3.haplomerger bbv18wm_A
+
+These files/directories are going to be output :
+from HM_pathFinder_preparation.pl :
+  bbv18wm_A.bbv18wm_Ax.result/hm.scaffolds - information of original scaffolds
+  bbv18wm_A.bbv18wm_Ax.result/hm.nodes - information of the alignment blocks (a block is a node)
+  bbv18wm_A.bbv18wm_Ax.result/hm.portions - information of the partions of original scaffolds
+from HM_pathFinder.pl :
+  *** bbv18wm_A.bbv18wm_Ax.result/hm.new_scaffolds - the solved relations between two haplotypic scaffolds
+  *** bbv18wm_A.bbv18wm_Ax.result/hm.assembly_errors - potential assembly errors in the original assembly
+  bbv18wm_A.bbv18wm_Ax.result/hm.unpaired - a list of the unpaired scaffolds
+from XHM_haploMerger.pl :
+  bbv18wm_A.bbv18wm_Ax.result/hm.connections - the alignment blocks connecting two different scaffolds
+  bbv18wm_A.bbv18wm_Ax.result/hm.unpaired_updated - an updated list of the unpaired scaffolds
+  bbv18wm_A.bbv18wm_Ax.result/assembly_hapA/B.fa.gz - original scaffold sequences separated for two haplotypes
+  *** bbv18wm_A.bbv18wm_Ax.result/optiNewScaffolds.fa.gz - new primary/reference haploid assembly
+  *** bbv18wm_A.bbv18wm_Ax.result/optiNewScaffolds_alt.fa.gz - new alternative haploid assembly
+  *** bbv18wm_A.bbv18wm_Ax.result/unpaired.fa.gz - sequences failed to be incorporated into new scaffolds
+log files:
+  _B3.pathFinder_preparation.log
+  _B3.pathFinder.log
+  _B3.haploMerger.log (include a list of the sizes of scaffolds from optiNewScaffolds.fa.gz)
+
+
+>>> Running command : ./hm.batchB4.refine_unpaired_sequences bbv18wm_A
+
+These files/directories are going to be output :
+  optiNewScaffolds.seq (will be deleted)
+  unpaired.seq (will be deleted)
+  unpaired.optiNewScaffolds.result (will be deleted)
+  bbv18wm_A.bbv18wm_Ax.result/unpaired.tbest.net - net file for unpaired sequences
+  *** bbv18wm_A.bbv18wm_Ax.result/unpaired_refined.fa.gz - updated unpaired sequences
+log files:
+  _B4.un_initiation.log, _B.un_all_lastz.log, _B.un_axtChainRecipBestNet.log
+  _B4.unincorpRefiner.log
+
+
+>>> Running command : ./hm.batchB5.merge_paired_and_unpaired_sequences bbv18wm_A
+
+These files/directories are going to be output :
+  *** bbv18wm_A_ref.fa.gz - the reference haploid assembly   (unpaired_refined not included)
+  *** bbv18wm_A_alt.fa.gz - the alternative haploid assembly (unpaired_refined not included)
+log files:
+  _B5.merge_paired_and_unpaired.log
+
+
+>>> Running command : ./hm.batchC1.hierarchical_scaffolding bbv18wm_A_ref
+
+These files/directories are going to be output :
+  bbv18wm_A_ref.ss/ - the running directory for the secondary scaffolding
+  *** bbv18wm_A_ref_C.fa.gz - the new reference haploid assembly
+log files:
+  _C1.scaffolding.log
+
+
+>>> Running command : ./hm.batchC2.update_reference_and_alternative_assemblies bbv18wm_A_ref
+
+These files/directories are going to be output :
+  bbv18wm_A_ref.ss/ss_new2old_scaffolds.txt
+  *** _C.fa.gz - the updated alternative haploid assembly
+log files:
+  _C2.new_ref_and_alt_scf.log
+
+
+>>> Running command : ./hm.batchD1.initiation_and_all_lastz bbv18wm_A_ref_C
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+These files/directories are going to be output :
+  bbv18wm_A_ref_Cx.fa.gz - a copy of the genome sequence file bbv18wm_A_ref_C.fa(.gz)
+  bbv18wm_A_ref_C.sizes - the size of each scaffold sequences
+  bbv18wm_A_ref_Cx.sizes - the size of each scaffold sequences
+  bbv18wm_A_ref_C.seq/*.fa and *.nib - fasta files and nib files for scaffold sequences
+  bbv18wm_A_ref_Cx.seq/*.fa and *.nib - fasta files and nib files for scaffold sequences
+  *** bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt/*.axt, *.axt.*, and *.log - raw lastz result files and their log files
+log files:
+  _D1.initiation.log - log file
+  _D1.all_lastz.log - log file
+
+
+>>> Running command : ./hm.batchD2.chainNet_and_netToMaf bbv18wm_A_ref_C
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+These files/directories are going to be output :
+  bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/all.chain.gz - raw chain file, gzip compressed
+  *** bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/all.rbest.chain.gz - reciprocal best chain file, gzip compressed
+  *** bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/all.rbest.net.gz - reciprocal best net file, gzip compressed
+log files:
+  bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/*.log - log files for HM_axtChainRecipBestNet.pl
+  _D2.axtChainRecipBestNet.log - log file
+
+*** NOTE THAT you may delete the directory
+*** bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt after having sucessfully finished this script!
+
+
+***********************************************************************************
+*** NOTE THAT if this script finished sucessfully, you can delete the directory 
+*** bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt to save tens of gigabases' disk space !
+***********************************************************************************
+
+
+>>> Running command : ./hm.batchD3.remove_tandem_assemblies bbv18wm_A_ref_C
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+These files/directories are going to be output :
+  bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/selfOnly.nets/*.net - store the self-self notrivial net files (deletable)
+  bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/hm.tandem_assemblies - show tandem positions
+  *** bbv18wm_A_ref_C_D.fa.gz - the new haploid genome assembly withf tandem mis-assemblies removed
+ log files:
+  _D3.tandem_removal.log (including the info of removed seqeunces)
+  _D3.tandem_removal_excised_seq.fa (including the excised sequences)
+
+
+>>> Running command : ./hm.batchE1.wrapper_for_gapCloser_v1.12 bbv18wm_A_ref_C_D
+
+These files/directories are going to be output :
+  bbv18wm_A_ref_C_D.gf/ - the working directory for gapfilling
+  *** bbv18wm_A_ref_C_D.agp - agp v1.1 file for bbv18wm_A_ref_C_D.fa.gz
+  *** bbv18wm_A_ref_C_D_E.fa.gz - the new assembly after gap filling
+  *** bbv18wm_A_ref_C_D_E.agp - agp v1.1 file for bbv18wm_A_ref_C_D_E.fa.gz
+log files:
+  _E1.gapcloser.log
+  _E1.reconstructAssembly.log
+
+Set to --ngap mode!
+Finished scf fasta reading.
+Finished agp outputing.
+
+
+========== Start at 2016年 11月 30日 星期三 19:02:16 CST
+../bin/GF_gapfilling_preparation.pl --scf=bbv18wm_A_ref_C_D.fa.gz --agp=bbv18wm_A_ref_C_D.agp
+
+deleted scf count: 0; cut seq count: 0; cut seq len: 0.
+finished ctg/scf/agp adjustment.
+
+
+========== Time used = 96 seconds or 0.0266666666666667 hours.
+

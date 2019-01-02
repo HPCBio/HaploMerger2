@@ -1,0 +1,44 @@
+
+
+========== Start at 2016年 11月 30日 星期三 17:23:42 CST
+../bin/XHM_tandemAssemblyRemover.pl --Species genome_A_ref genome_A_refx --filter=2500 --runChainNet=1 --minXversusY=80 --minLen=2500 --maxInterval=15 --minCoverage=80 --noRerun=0 --Force --Delete=1
+
+Species included: genome_A_refgenome_A_refx
+Set to OVER-WRITING mode!
+Set to DELETING mode!
+chainSplit genome_A_ref.genome_A_refx.result/selfOnly.nets genome_A_ref.genome_A_refx.result/all.rbest.chain.gz
+ChainNet and filter nets ...
+chainFilter -q=Sc0000000 genome_A_ref.genome_A_refx.result/selfOnly.nets/Sc0000000.chain 2>/dev/null| chainPreNet /dev/stdin genome_A_ref.sizes genome_A_refx.sizes /dev/stdout 2>/dev/null| chainNet -minSpace=25 -minScore=2000 /dev/stdin genome_A_ref.sizes genome_A_refx.sizes /dev/stdout /dev/null 2>/dev/null| netSyntenic /dev/stdin /dev/stdout 2>/dev/null >genome_A_ref.genome_A_refx.result/selfOnly.nets/Sc0000000.net 2>/dev/null
+chainFilter -q=Sc0000001 genome_A_ref.genome_A_refx.result/selfOnly.nets/Sc0000001.chain 2>/dev/null| chainPreNet /dev/stdin genome_A_ref.sizes genome_A_refx.sizes /dev/stdout 2>/dev/null| chainNet -minSpace=25 -minScore=2000 /dev/stdin genome_A_ref.sizes genome_A_refx.sizes /dev/stdout /dev/null 2>/dev/null| netSyntenic /dev/stdin /dev/stdout 2>/dev/null >genome_A_ref.genome_A_refx.result/selfOnly.nets/Sc0000001.net 2>/dev/null
+chainFilter -q=Sc0000002 genome_A_ref.genome_A_refx.result/selfOnly.nets/Sc0000002.chain 2>/dev/null| chainPreNet /dev/stdin genome_A_ref.sizes genome_A_refx.sizes /dev/stdout 2>/dev/null| chainNet -minSpace=25 -minScore=2000 /dev/stdin genome_A_ref.sizes genome_A_refx.sizes /dev/stdout /dev/null 2>/dev/null| netSyntenic /dev/stdin /dev/stdout 2>/dev/null >genome_A_ref.genome_A_refx.result/selfOnly.nets/Sc0000002.net 2>/dev/null
+chainFilter -q=xfSc0000000 genome_A_ref.genome_A_refx.result/selfOnly.nets/xfSc0000000.chain 2>/dev/null| chainPreNet /dev/stdin genome_A_ref.sizes genome_A_refx.sizes /dev/stdout 2>/dev/null| chainNet -minSpace=25 -minScore=2000 /dev/stdin genome_A_ref.sizes genome_A_refx.sizes /dev/stdout /dev/null 2>/dev/null| netSyntenic /dev/stdin /dev/stdout 2>/dev/null >genome_A_ref.genome_A_refx.result/selfOnly.nets/xfSc0000000.net 2>/dev/null
+Read the net files from genome_A_ref.genome_A_refx.result/selfOnly.nets and parse them ...
+
+Showing original blocks ... 
+0	Sc0000000	1	3150	5800	Sc0000000	1	28950	31600	
+1	Sc0000000	1	28950	31600	Sc0000000	1	3150	5800	
+2	Sc0000001	1	0	2500	Sc0000001	1	23700	26200	
+3	Sc0000001	1	23700	26200	Sc0000001	1	0	2500	
+4	xfSc0000000	1	500	3363	xfSc0000000	1	3363	6226	
+5	xfSc0000000	1	3363	6226	xfSc0000000	1	500	3363	
+
+
+
+Showing blocks after cutting ... 
+0	Sc0000000	1	3150	5800	Sc0000000	1	28950	31600	
+0	Sc0000000	1	28950	31600	Sc0000000	1	3150	5800	
+0	Sc0000001	1	0	2500	Sc0000001	1	23700	26200	
+0	Sc0000001	1	23700	26200	Sc0000001	1	0	2500	
+0	xfSc0000000	1	500	3363	xfSc0000000	1	3363	6226	
+0	xfSc0000000	1	3363	6226	xfSc0000000	1	500	3363	
+
+#*****************************************************************#
+# Finished removing of tandem assembly errors.
+
+# The minimum portion length for deletion is set to 2500.
+
+Force to delete temp files in genome_A_ref.genome_A_refx.result/selfOnly.nets/.
+
+
+========== Time used = 0 seconds or 0 hours.
+

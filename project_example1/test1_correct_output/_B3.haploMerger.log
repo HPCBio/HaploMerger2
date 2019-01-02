@@ -1,0 +1,56 @@
+
+
+========== Start at 2016年 11月 30日 星期三 17:27:43 CST
+../bin/XHM_haploMerger.pl --Species genome genomex --Force --Delete --selectLongHaplotype --minOverlap=0
+
+Species included:  genome genomex 
+Set to OVER-WRITING mode!
+Overlapping alignments with length <  0  are not used for connecting two old scaffolds.
+Option --selectLongHaplotype is set to  1  !
+Option --gapFilling is set to  0  !
+Option --haploMergingMode is set to  original  !
+Option --updatedNewScaffolds is set to    !
+Option --updatedConnections is set to    !
+Option --optimalContinuity is set to  1  !
+Option --unpaired is set to  1  !
+reading genome.genomex.result/hm.new_scaffolds file and creating  data structure ... 
+Processing junctions between old haplotype scaffolds ... 
+
+Outputing haplotype assembly A ... 
+#name	original_size	hap_id	start	end	strand
+sc_D	18450	A0	0	3850	1
+sc_F	17250	A1	0	17250	1
+sc_A	10500	A2	0	10500	1
+sc_D	18450	A3	3850	18450	1
+
+Outputing haplotype assembly B ... 
+#name	original_size	hap_id	start	end	strand
+sc_C	5000	B0	0	5000	1
+sc_E	7250	B1	0	7250	1
+sc_G	8800	B2	0	8800	1
+sc_B	10350	B3	0	10350	1
+sc_H	6350	B4	0	6350	1
+
+
+Select the the active haplotype for each portion ...
+Adjust the strand sign of the selected haplotype sequence ...
+Output unpaired.fa.gz (only output scaffolds with size >= 500 bp) ...
+Processing optimal_assembly data ...
+Printing out optimal_assembly data (only output scaffold with length >= 500 bp) ...
+Printing out hm.connections ... 
+
+The haplome size is 63400 bp (only caculate sequences with length >= 500 bp);
+the haplome scaffold N50 number is 2;
+the haplome scaffold N50 size is 26200 bp;
+the raw size of unpaired scaffolds is 6776 bp (>= 500 bp);
+the raw size of unpaired scaffold portions is 0 bp (>= 500 bp).
+
+Printing the optimalContinuity assembly data ...
+#Sc_scaffold_id	start_portion_id	end_portion_id	size	refined_size
+Sc0000000	8	14	31600	31600
+Sc0000001	3	7	26200	26200
+Sc0000002	0	2	5600	5600
+
+
+========== Time used = 1 seconds or 0.000277777777777778 hours.
+

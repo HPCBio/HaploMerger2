@@ -1,0 +1,35 @@
+
+
+========== Start at 2016年 11月 30日 星期三 17:23:31 CST
+../bin/HM_pathFinder_preparation.pl --Species genome genomex --scoreScheme=score --filter=100000 --Force --Delete
+
+Species included:  genome genomex 
+Set the scoring scheme to score, and set the filter score/ali_len to 100000 .
+Set to OVER-WRITING mode!
+Set to DELETING mode!
+Produce tsc/qsc_ids, total id are 9 !
+Read the zeroMinSpace.rbest.net.gz file and do some basic node filtering ...
+Total nodes are  20 ;
+deleted nodes are 0;
+add-up score counts are 0.
+To perform advanced node filtering and to produce the final data set of nodes ...
+20 left before advanced filtering.
+Set filter score/ali_len to 100000 for node advanced filtering ...
+1 low-scored nodes have been filtered (deletion status value = -2)!
+0 embeded nodes have been filtered (deletion status value = -4)!
+19 nodes left after advanced filtering (no mirror).
+Recreate the perfect mirror alignments (nodes) ...
+20 nodes left (with mirror).
+To produce scaffold portion data structure ...
+Cut the scaffold into portions ...
+1 target scaffolds have no alignment hit !
+1 query  scaffolds have no alignment hit !
+Appending infomation of Ns and lowcases to nodes ...
+Output the scaffold infomation to genome.genomex.result/hm.scaffolds.
+Output the scaffold portion infomation to genome.genomex.result/hm.sc_portions.
+Output the node (alignment block) infomation to genome.genomex.result/hm.nodes.
+Finished preparation for pathFinder.pl.
+
+
+========== Time used = 	0	 seconds or 	0	 hours.
+

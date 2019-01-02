@@ -1,0 +1,36 @@
+
+
+========== Start at 2016年 11月 30日 星期三 17:27:38 CST
+../bin/HM_all_lastz_mThreads.pl --Species genome genomex --notrivial --radius=5000 --threads=1 --identity=80 --targetSize=50000000 --querySize=1600000000 --Force --Delete
+
+Set to OVER-WRITING mode!
+Set to Delete mode!
+Species included:  genome genomex 
+checking missing gz-compressed multiple-fasta files ...
+Every required files seem ok, going on ...
+
+Check existed raw.axt directory ...
+checking if genome.genomex.result/raw.axt is existing ...
+cleaning the evironment anyway ...
+Thread number is set to ... 1 !
+Target file size is ... 50000000 !
+Query file size is ... 1600000000 !
+Is_noself status is ... 0 !
+--notrivial status is ... 1 !
+--radius for notrivial function is ... 5000 !
+--unmask for covert lowcase letters to upcase letters ...  !
+go to lastz all to all step ...
+
+Finished splitting the target fasta file ...
+HM_all_lastz_target_8151_00.fa
+Finished splitting the query fasta file ...
+HM_all_lastz_query_8151_00.fa
+lastz genome to genomex ... 
+Thread_ID 1 : lastz HM_all_lastz_target_8151_00.fa[multiple] HM_all_lastz_query_8151_00.fa  --masking=254 --notrivial --hspthresh=3000 --ydrop=3400 --gappedthresh=3000 --gap=400,30 --step=1 --seed=12of19 --notransition --format=axt --markend --verbosity=1 --scores=scoreMatrix.q --identity=80  1>> genome.genomex.result/raw.axt/HM_all_lastz_target_8151_00.fa.HM_all_lastz_query_8151_00.fa.axt 2>> genome.genomex.result/raw.axt/HM_all_lastz_target_8151_00.fa.HM_all_lastz_query_8151_00.fa.log 
+
+Finished lastz all genome to all genomex !
+To delete self-self trivial alignment from genome.genomex.result/raw.axt/HM_all_lastz_target_8151_00.fa.axt ...
+
+
+========== Time used =  2  seconds or  0.000555555555555556  hours.
+

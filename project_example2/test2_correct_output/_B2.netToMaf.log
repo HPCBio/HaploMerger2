@@ -1,0 +1,33 @@
+
+
+========== Start at 2016年 11月 30日 星期三 17:23:35 CST
+../bin/HM_netToAxtMaf.pl --Species genome_A genome_Ax --Force --netFile=mafFiltered.net.gz --chainFile=all.rbest.chain.gz
+
+Set to OVER-WRITING mode!
+Species included:  genome_A genome_Ax 
+=== netToMaf start ===
+Checking the following two files ...
+genome_A.genome_Ax.result/all.rbest.chain.gz
+genome_A.genome_Ax.result/mafFiltered.net
+Checking missing sizes files ...
+checking nib files in genome_A.seq/ ...
+checking nib files in genome_Ax.seq/ ...
+checking net.maf/axt file genome_A.genome_Ax.result/mafFiltered.net.maf.gz and genome_A.genome_Ax.result/mafFiltered.net.axt.gz ...
+gunzip -c genome_A.genome_Ax.result/all.rbest.chain.gz | netToAxt -maxGap=300 genome_A.genome_Ax.result/mafFiltered.net /dev/stdin genome_A.seq genome_Ax.seq /dev/stdout | axtSort /dev/stdin /dev/stdout | axtToMaf -tPrefix=genome_A. -qPrefix=genome_Ax. /dev/stdin genome_A.sizes genome_Ax.sizes /dev/stdout| gzip -c > genome_A.genome_Ax.result/mafFiltered.net.maf.gz 
+=== netToMaf done! ===
+
+
+
+========== Time used =  0  seconds or  0  hours.
+
+c_D
+Processing sc_E
+Processing sc_G
+Processing sc_A
+========== Start at 2016年 11月 30日 星期三 17:23:35 CST
+
+
+../bin/mafSplitByTarget.pl genome_A.genome_Ax.result/mafFiltered.net.maf.gz
+
+========== Time used =  0  seconds or  0  hours.
+

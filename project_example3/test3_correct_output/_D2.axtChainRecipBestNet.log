@@ -1,0 +1,542 @@
+
+
+========== Start at 2016年 11月 30日 星期三 18:53:25 CST
+../bin/HM_axtChainRecipBestNet.pl --rbestNet --axtChain --threads=16 --axtSuffix=axt.self.notrivial --linearGap=medium --minScore=25000 --minSpace=200 --minScore2=30000 --Species bbv18wm_A_ref_C bbv18wm_A_ref_Cx --Force --Delete
+
+Set to OVER-WRITING mode!
+Species included:  bbv18wm_A_ref_C bbv18wm_A_ref_Cx 
+Thread number for axtChain is set to ... 16 !
+=== axtChain start ===
+Checking missing sizes files ...
+checking nib files in bbv18wm_A_ref_C.seq/ ...
+checking nib files in bbv18wm_A_ref_Cx.seq/ ...
+checking chain file bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/all.chain.gz ...
+Thread_ID 1:  axtChain -linearGap=medium -minScore=25000 -verbose=0  -scoreScheme=scoreMatrix.q  bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt/HM_all_lastz_target_71064_00.fa.axt.self.notrivial bbv18wm_A_ref_C.seq bbv18wm_A_ref_Cx.seq /dev/stdout  | chainAntiRepeat bbv18wm_A_ref_C.seq bbv18wm_A_ref_Cx.seq /dev/stdin bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt/HM_all_lastz_target_71064_00.fa.axt.self.notrivial.chain  
+Thread_ID 2:  axtChain -linearGap=medium -minScore=25000 -verbose=0  -scoreScheme=scoreMatrix.q  bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt/HM_all_lastz_target_71064_01.fa.axt.self.notrivial bbv18wm_A_ref_C.seq bbv18wm_A_ref_Cx.seq /dev/stdout  | chainAntiRepeat bbv18wm_A_ref_C.seq bbv18wm_A_ref_Cx.seq /dev/stdin bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt/HM_all_lastz_target_71064_01.fa.axt.self.notrivial.chain  
+Thread_ID 3:  axtChain -linearGap=medium -minScore=25000 -verbose=0  -scoreScheme=scoreMatrix.q  bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt/HM_all_lastz_target_71064_02.fa.axt.self.notrivial bbv18wm_A_ref_C.seq bbv18wm_A_ref_Cx.seq /dev/stdout  | chainAntiRepeat bbv18wm_A_ref_C.seq bbv18wm_A_ref_Cx.seq /dev/stdin bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt/HM_all_lastz_target_71064_02.fa.axt.self.notrivial.chain  
+Thread_ID 4:  axtChain -linearGap=medium -minScore=25000 -verbose=0  -scoreScheme=scoreMatrix.q  bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt/HM_all_lastz_target_71064_03.fa.axt.self.notrivial bbv18wm_A_ref_C.seq bbv18wm_A_ref_Cx.seq /dev/stdout  | chainAntiRepeat bbv18wm_A_ref_C.seq bbv18wm_A_ref_Cx.seq /dev/stdin bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt/HM_all_lastz_target_71064_03.fa.axt.self.notrivial.chain  
+Thread_ID 5:  axtChain -linearGap=medium -minScore=25000 -verbose=0  -scoreScheme=scoreMatrix.q  bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt/HM_all_lastz_target_71064_04.fa.axt.self.notrivial bbv18wm_A_ref_C.seq bbv18wm_A_ref_Cx.seq /dev/stdout  | chainAntiRepeat bbv18wm_A_ref_C.seq bbv18wm_A_ref_Cx.seq /dev/stdin bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt/HM_all_lastz_target_71064_04.fa.axt.self.notrivial.chain  
+Thread_ID 6:  axtChain -linearGap=medium -minScore=25000 -verbose=0  -scoreScheme=scoreMatrix.q  bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt/HM_all_lastz_target_71064_05.fa.axt.self.notrivial bbv18wm_A_ref_C.seq bbv18wm_A_ref_Cx.seq /dev/stdout  | chainAntiRepeat bbv18wm_A_ref_C.seq bbv18wm_A_ref_Cx.seq /dev/stdin bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt/HM_all_lastz_target_71064_05.fa.axt.self.notrivial.chain  
+Thread_ID 7:  axtChain -linearGap=medium -minScore=25000 -verbose=0  -scoreScheme=scoreMatrix.q  bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt/HM_all_lastz_target_71064_06.fa.axt.self.notrivial bbv18wm_A_ref_C.seq bbv18wm_A_ref_Cx.seq /dev/stdout  | chainAntiRepeat bbv18wm_A_ref_C.seq bbv18wm_A_ref_Cx.seq /dev/stdin bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt/HM_all_lastz_target_71064_06.fa.axt.self.notrivial.chain  
+Thread_ID 8:  axtChain -linearGap=medium -minScore=25000 -verbose=0  -scoreScheme=scoreMatrix.q  bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt/HM_all_lastz_target_71064_07.fa.axt.self.notrivial bbv18wm_A_ref_C.seq bbv18wm_A_ref_Cx.seq /dev/stdout  | chainAntiRepeat bbv18wm_A_ref_C.seq bbv18wm_A_ref_Cx.seq /dev/stdin bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt/HM_all_lastz_target_71064_07.fa.axt.self.notrivial.chain  
+Thread_ID 9:  axtChain -linearGap=medium -minScore=25000 -verbose=0  -scoreScheme=scoreMatrix.q  bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt/HM_all_lastz_target_71064_08.fa.axt.self.notrivial bbv18wm_A_ref_C.seq bbv18wm_A_ref_Cx.seq /dev/stdout  | chainAntiRepeat bbv18wm_A_ref_C.seq bbv18wm_A_ref_Cx.seq /dev/stdin bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt/HM_all_lastz_target_71064_08.fa.axt.self.notrivial.chain  
+Thread_ID 10:  axtChain -linearGap=medium -minScore=25000 -verbose=0  -scoreScheme=scoreMatrix.q  bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt/HM_all_lastz_target_71064_09.fa.axt.self.notrivial bbv18wm_A_ref_C.seq bbv18wm_A_ref_Cx.seq /dev/stdout  | chainAntiRepeat bbv18wm_A_ref_C.seq bbv18wm_A_ref_Cx.seq /dev/stdin bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt/HM_all_lastz_target_71064_09.fa.axt.self.notrivial.chain  
+Thread_ID 11:  axtChain -linearGap=medium -minScore=25000 -verbose=0  -scoreScheme=scoreMatrix.q  bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt/HM_all_lastz_target_71064_10.fa.axt.self.notrivial bbv18wm_A_ref_C.seq bbv18wm_A_ref_Cx.seq /dev/stdout  | chainAntiRepeat bbv18wm_A_ref_C.seq bbv18wm_A_ref_Cx.seq /dev/stdin bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt/HM_all_lastz_target_71064_10.fa.axt.self.notrivial.chain  
+Thread_ID 12:  axtChain -linearGap=medium -minScore=25000 -verbose=0  -scoreScheme=scoreMatrix.q  bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt/HM_all_lastz_target_71064_11.fa.axt.self.notrivial bbv18wm_A_ref_C.seq bbv18wm_A_ref_Cx.seq /dev/stdout  | chainAntiRepeat bbv18wm_A_ref_C.seq bbv18wm_A_ref_Cx.seq /dev/stdin bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt/HM_all_lastz_target_71064_11.fa.axt.self.notrivial.chain  
+Thread_ID 13:  axtChain -linearGap=medium -minScore=25000 -verbose=0  -scoreScheme=scoreMatrix.q  bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt/HM_all_lastz_target_71064_12.fa.axt.self.notrivial bbv18wm_A_ref_C.seq bbv18wm_A_ref_Cx.seq /dev/stdout  | chainAntiRepeat bbv18wm_A_ref_C.seq bbv18wm_A_ref_Cx.seq /dev/stdin bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt/HM_all_lastz_target_71064_12.fa.axt.self.notrivial.chain  
+Thread_ID 14:  axtChain -linearGap=medium -minScore=25000 -verbose=0  -scoreScheme=scoreMatrix.q  bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt/HM_all_lastz_target_71064_13.fa.axt.self.notrivial bbv18wm_A_ref_C.seq bbv18wm_A_ref_Cx.seq /dev/stdout  | chainAntiRepeat bbv18wm_A_ref_C.seq bbv18wm_A_ref_Cx.seq /dev/stdin bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt/HM_all_lastz_target_71064_13.fa.axt.self.notrivial.chain  
+chainMergeSort bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/raw.axt/*.axt.self.notrivial.chain | gzip -c >bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/all.chain.gz 
+=== axtChain done! ===
+
+=== rbestNet start ===
+--minScore2 is set to 30000.
+--minSpace is set to 200.
+Checking missing sizes files ...
+checking chain.gz files ...
+bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/all.chain.gz 
+checking the net file and if present, produce the corresponding chain file ...
+checking old rbest.net/chain.gz and qrbest.net/chain.gz file ...
+creating bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.all.tbest.net and chain ...
+gunzip -c bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/all.chain.gz | chainPreNet /dev/stdin bbv18wm_A_ref_C.sizes bbv18wm_A_ref_Cx.sizes /dev/stdout 2>>bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/_ChainPreNet.log | chainNet -minSpace=200 -minScore=30000 /dev/stdin bbv18wm_A_ref_C.sizes bbv18wm_A_ref_Cx.sizes /dev/stdout /dev/null 2>>bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/_ChainNet.log | netSyntenic /dev/stdin bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.all.tbest.net 2>>bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/_netSyntenic.log 
+gunzip -c bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/all.chain.gz | netChainSubset bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.all.tbest.net /dev/stdin /dev/stdout 2>>bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/_netChainSubset.log | chainStitchId /dev/stdin bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.all.tbest.chain 2>>bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/_ChainStitchId.log 
+creating all.rbest.net.gz ... 
+chainSwap bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.all.tbest.chain /dev/stdout 2>>bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/_ChainSwap.log| chainSort /dev/stdin bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/bbv18wm_A_ref_Cx.bbv18wm_A_ref_C.all.tbest.chain 2>>bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/_ChainSort.log 
+chainPreNet bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/bbv18wm_A_ref_Cx.bbv18wm_A_ref_C.all.tbest.chain bbv18wm_A_ref_Cx.sizes bbv18wm_A_ref_C.sizes /dev/stdout 2>>bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/_ChainPreNet.log | chainNet -minSpace=200 -minScore=30000 /dev/stdin bbv18wm_A_ref_Cx.sizes bbv18wm_A_ref_C.sizes /dev/stdout /dev/null 2>>bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/_ChainNet.log | netSyntenic /dev/stdin bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/bbv18wm_A_ref_Cx.bbv18wm_A_ref_C.all.rbest.net 2>>bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/_netSyntenic.log 
+netChainSubset bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/bbv18wm_A_ref_Cx.bbv18wm_A_ref_C.all.rbest.net bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/bbv18wm_A_ref_Cx.bbv18wm_A_ref_C.all.tbest.chain /dev/stdout 2>>bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/_netChainSubset.log | chainStitchId /dev/stdin bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/bbv18wm_A_ref_Cx.bbv18wm_A_ref_C.all.rbest.chain 2>>bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/_ChainStitchId.log 
+chainSwap bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/bbv18wm_A_ref_Cx.bbv18wm_A_ref_C.all.rbest.chain /dev/stdout 2>>bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/_ChainSwap.log | chainSort /dev/stdin bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.all.rbest.chain 2>>bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/_ChainSort.log 
+chainPreNet bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.all.rbest.chain bbv18wm_A_ref_C.sizes bbv18wm_A_ref_Cx.sizes /dev/stdout 2>>bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/_ChainPreNet.log | chainNet -minSpace=200 -minScore=30000 /dev/stdin bbv18wm_A_ref_C.sizes bbv18wm_A_ref_Cx.sizes /dev/stdout /dev/null 2>>bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/_ChainNet.log | netSyntenic /dev/stdin bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.all.rbest.net 2>>bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/_netSyntenic.log  
+netToAxt -maxGap=99999999 bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.all.rbest.net bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.all.rbest.chain bbv18wm_A_ref_C.seq bbv18wm_A_ref_Cx.seq bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.all.rbest.axt 
+axtChain -linearGap=medium -minScore=0  -verbose=0  -scoreScheme=scoreMatrix.q  bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.all.rbest.axt bbv18wm_A_ref_C.seq bbv18wm_A_ref_Cx.seq  /dev/stdout | gzip -c > bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/all.rbest.chain.gz 
+gunzip -c bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/all.rbest.chain.gz | chainPreNet /dev/stdin bbv18wm_A_ref_C.sizes bbv18wm_A_ref_Cx.sizes /dev/stdout 2>>bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/_ChainPreNet.log | chainNet -minSpace=200 -minScore=30000 /dev/stdin bbv18wm_A_ref_C.sizes bbv18wm_A_ref_Cx.sizes /dev/stdout /dev/null 2>>bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/_ChainNet.log | netSyntenic /dev/stdin bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/all.rbest.net 2>>bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/_netSyntenic.log 
+reciprocal-best bbv18wm_A_ref_C-reference chain file bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/all.rbest.chain.gz created!
+reciprocal-best bbv18wm_A_ref_C-reference net file bbv18wm_A_ref_C.bbv18wm_A_ref_Cx.result/all.rbest.net created!
+Deleting imtermediate net and chain files ... 
+=== rbestNet done! ===
+
+
+
+========== Time used =  380  seconds or  0.105555555555556  hours.
+
+
+Processing sc0000132
+Processing sc0000467
+Processing sc0000338
+Processing sc0000511
+Processing sc0000418
+Processing sc0000518
+Processing sc0000039
+Processing sc0000098
+Processing sc0000010
+Processing sc0000162
+Processing sc0000451
+Processing sc0000368
+Processing sc0000342
+Processing sc0000304
+Processing sc0000123
+Processing sc0000108
+Processing sc0000439
+Processing sc0000137
+Processing sc0000156
+Processing sc0000206
+Processing sc0000328
+Processing sc0000484
+Processing sc0000226
+Processing sc0000149
+Processing sc0000382
+Processing sc0000279
+Processing sc0000014
+Processing sc0000359
+Processing sc0000150
+Processing sc0000072
+Processing sc0000103
+Processing sc0000352
+Processing sc0000021
+Processing sc0000410
+Processing sc0000026
+Processing sc0000387
+Processing sc0000537
+Processing sc0000489
+Processing sc0000078
+Processing sc0000265
+Processing sc0000295
+Processing sc0000289
+Processing sc0000235
+Processing sc0000292
+Processing sc0000060
+Processing sc0000062
+Processing sc0000360
+Processing sc0000470
+Processing sc0000505
+Processing sc0000310
+Processing sc0000240
+Processing sc0000056
+Processing sc0000044
+Processing sc0000466
+Processing sc0000339
+Processing sc0000195
+Processing sc0000169
+Processing sc0000199
+Processing sc0000522
+Processing sc0000502
+Processing sc0000090
+Processing sc0000453
+Processing sc0000564
+Processing sc0000245
+Processing sc0000085
+Processing sc0000478
+Processing sc0000237
+Processing sc0000452
+Processing sc0000319
+Processing sc0000396
+Processing sc0000271
+Processing sc0000523
+Processing sc0000167
+Processing sc0000351
+Processing sc0000007
+Processing sc0000407
+Processing sc0000408
+Processing sc0000303
+Processing sc0000205
+Processing sc0000216
+Processing sc0000507
+Processing sc0000221
+Processing sc0000258
+Processing sc0000043
+Processing sc0000354
+Processing sc0000127
+Processing sc0000174
+Processing sc0000332
+Processing sc0000465
+Processing sc0000278
+Processing sc0000055
+Processing sc0000125
+Processing sc0000341
+Processing sc0000115
+Processing sc0000190
+Processing sc0000538
+Processing sc0000185
+Processing sc0000110
+Processing sc0000239
+Processing sc0000082
+Processing sc0000557
+Processing sc0000446
+Processing sc0000400
+Processing sc0000024
+Processing sc0000194
+Processing sc0000153
+Processing sc0000546
+Processing sc0000438
+Processing sc0000144
+Processing sc0000236
+Processing sc0000246
+Processing sc0000164
+Processing sc0000120
+Processing sc0000031
+Processing sc0000189
+Processing sc0000259
+Processing sc0000286
+Processing sc0000069
+Processing sc0000027
+Processing sc0000273
+Processing sc0000371
+Processing sc0000091
+Processing sc0000097
+Processing sc0000440
+Processing sc0000350
+Processing sc0000113
+Processing sc0000225
+Processing sc0000041
+Processing sc0000519
+Processing sc0000038
+Processing sc0000563
+Processing sc0000266
+Processing sc0000551
+Processing sc0000161
+Processing sc0000333
+Processing sc0000257
+Processing sc0000053
+Processing sc0000524
+Processing sc0000365
+Processing sc0000385
+Processing sc0000287
+Processing sc0000001
+Processing sc0000412
+Processing sc0000284
+Processing sc0000095
+Processing sc0000325
+Processing sc0000215
+Processing sc0000238
+Processing sc0000559
+Processing sc0000025
+Processing sc0000186
+Processing sc0000406
+Processing sc0000272
+Processing sc0000052
+Processing sc0000388
+Processing sc0000208
+Processing sc0000223
+Processing sc0000486
+Processing sc0000506
+Processing sc0000573
+Processing sc0000513
+Processing sc0000126
+Processing sc0000102
+Processing sc0000543
+Processing sc0000154
+Processing sc0000437
+Processing sc0000083
+Processing sc0000447
+Processing sc0000104
+Processing sc0000020
+Processing sc0000145
+Processing sc0000552
+Processing sc0000508
+Processing sc0000163
+Processing sc0000426
+Processing sc0000171
+Processing sc0000114
+Processing sc0000429
+Processing sc0000147
+Processing sc0000306
+Processing sc0000331
+Processing sc0000224
+Processing sc0000300
+Processing sc0000049
+Processing sc0000138
+Processing sc0000247
+Processing sc0000092
+Processing sc0000204
+Processing sc0000326
+Processing sc0000324
+Processing sc0000411
+Processing sc0000366
+Processing sc0000472
+Processing sc0000294
+Processing sc0000042
+Processing sc0000256
+Processing sc0000334
+Processing sc0000540
+Processing sc0000170
+Processing sc0000228
+Processing sc0000015
+Processing sc0000054
+Processing sc0000393
+Processing sc0000353
+Processing sc0000096
+Processing sc0000372
+Processing sc0000122
+Processing sc0000019
+Processing sc0000192
+Processing sc0000380
+Processing sc0000281
+Processing sc0000323
+Processing sc0000203
+Processing sc0000172
+Processing sc0000417
+Processing sc0000481
+Processing sc0000016
+Processing sc0000229
+Processing sc0000267
+Processing sc0000335
+Processing sc0000100
+Processing sc0000329
+Processing sc0000345
+Processing sc0000386
+Processing sc0000067
+Processing sc0000130
+Processing sc0000048
+Processing sc0000210
+Processing sc0000314
+Processing sc0000311
+Processing sc0000474
+Processing sc0000413
+Processing sc0000222
+Processing sc0000344
+Processing sc0000075
+Processing sc0000129
+Processing sc0000299
+Processing sc0000285
+Processing sc0000455
+Processing sc0000183
+Processing sc0000035
+Processing sc0000040
+Processing sc0000330
+Processing sc0000536
+Processing sc0000201
+Processing sc0000454
+Processing sc0000022
+Processing sc0000109
+Processing sc0000468
+Processing sc0000093
+Processing sc0000177
+Processing sc0000297
+Processing sc0000533
+Processing sc0000230
+Processing sc0000373
+Processing sc0000405
+Processing sc0000317
+Processing sc0000379
+Processing sc0000152
+Processing sc0000394
+Processing sc0000142
+Processing sc0000315
+Processing sc0000263
+Processing sc0000198
+Processing sc0000182
+Processing sc0000442
+Processing sc0000343
+Processing sc0000409
+Processing sc0000460
+Processing sc0000248
+Processing sc0000445
+Processing sc0000363
+Processing sc0000427
+Processing sc0000268
+Processing sc0000251
+Processing sc0000179
+Processing sc0000275
+Processing sc0000391
+Processing sc0000051
+Processing sc0000356
+Processing sc0000416
+Processing sc0000006
+Processing sc0000135
+Processing sc0000005
+Processing sc0000358
+Processing sc0000050
+Processing sc0000414
+Processing sc0000463
+Processing sc0000399
+Processing sc0000313
+Processing sc0000023
+Processing sc0000424
+Processing sc0000457
+Processing sc0000355
+Processing sc0000220
+Processing sc0000322
+Processing sc0000541
+Processing sc0000477
+Processing sc0000493
+Processing sc0000305
+Processing sc0000004
+Processing sc0000369
+Processing sc0000383
+Processing sc0000017
+Processing sc0000291
+Processing sc0000553
+Processing sc0000336
+Processing sc0000515
+Processing sc0000166
+Processing sc0000374
+Processing sc0000012
+Processing sc0000184
+Processing sc0000047
+Processing sc0000217
+Processing sc0000034
+Processing sc0000436
+Processing sc0000250
+Processing sc0000066
+Processing sc0000532
+Processing sc0000527
+Processing sc0000133
+Processing sc0000435
+Processing sc0000136
+Processing sc0000249
+Processing sc0000101
+Processing sc0000211
+Processing sc0000475
+Processing sc0000188
+Processing sc0000487
+Processing sc0000499
+Processing sc0000534
+Processing sc0000316
+Processing sc0000030
+Processing sc0000191
+Processing sc0000202
+Processing sc0000560
+Processing sc0000346
+Processing sc0000318
+Processing sc0000441
+Processing sc0000074
+Processing sc0000298
+Processing sc0000143
+Processing sc0000320
+Processing sc0000094
+Processing sc0000262
+Processing sc0000404
+Processing sc0000269
+Processing sc0000086
+Processing sc0000231
+Processing sc0000274
+Processing sc0000112
+Processing sc0000296
+Processing sc0000471
+Processing sc0000483
+Processing sc0000212
+Processing sc0000309
+Processing sc0000119
+Processing sc0000456
+Processing sc0000165
+Processing sc0000124
+Processing sc0000077
+Processing sc0000032
+Processing sc0000081
+Processing sc0000254
+Processing sc0000321
+Processing sc0000253
+Processing sc0000392
+Processing sc0000554
+Processing sc0000118
+Processing sc0000434
+Processing sc0000375
+Processing sc0000134
+Processing sc0000503
+Processing sc0000364
+Processing sc0000089
+Processing sc0000542
+Processing sc0000425
+Processing sc0000200
+Processing sc0000178
+Processing sc0000157
+Processing sc0000059
+Processing sc0000357
+Processing sc0000384
+Processing sc0000003
+Processing sc0000159
+Processing sc0000516
+Processing sc0000046
+Processing sc0000106
+Processing sc0000422
+Processing sc0000160
+Processing sc0000107
+Processing sc0000175
+Processing sc0000504
+Processing sc0000569
+Processing sc0000528
+Processing sc0000261
+Processing sc0000282
+Processing sc0000498
+Processing sc0000196
+Processing sc0000479
+Processing sc0000377
+Processing sc0000071
+Processing sc0000207
+Processing sc0000277
+Processing sc0000180
+Processing sc0000037
+Processing sc0000065
+Processing sc0000232
+Processing sc0000018
+Processing sc0000492
+Processing sc0000242
+Processing sc0000347
+Processing sc0000421
+Processing sc0000567
+Processing sc0000028
+Processing sc0000213
+Processing sc0000517
+Processing sc0000033
+Processing sc0000117
+Processing sc0000376
+Processing sc0000131
+Processing sc0000121
+Processing sc0000002
+Processing sc0000087
+Processing sc0000433
+Processing sc0000076
+Processing sc0000140
+Processing sc0000308
+Processing sc0000444
+Processing sc0000397
+Processing sc0000233
+Processing sc0000070
+Processing sc0000105
+Processing sc0000307
+Processing sc0000443
+Processing sc0000151
+Processing sc0000045
+Processing sc0000449
+Processing sc0000509
+Processing sc0000111
+Processing sc0000288
+Processing sc0000293
+Processing sc0000218
+Processing sc0000562
+Processing sc0000482
+Processing sc0000158
+Processing sc0000058
+Processing sc0000539
+Processing sc0000187
+Processing sc0000547
+Processing sc0000234
+Processing sc0000389
+Processing sc0000219
+Processing sc0000302
+Processing sc0000419
+Processing sc0000420
+Processing sc0000064
+Processing sc0000197
+Processing sc0000378
+Processing sc0000283
+Processing sc0000461
+Processing sc0000529
+Processing sc0000290
+Processing sc0000079
+Processing sc0000036
+Processing sc0000013
+Processing sc0000088
+Processing sc0000402
+Processing sc0000280
+Processing sc0000139
+Processing sc0000243
+Processing sc0000337
+Processing sc0000491
+Processing sc0000415
+Processing sc0000141
+Processing sc0000312
+Processing sc0000459
+Processing sc0000469
+Processing sc0000252
+Processing sc0000348
+Processing sc0000497
+Processing sc0000181

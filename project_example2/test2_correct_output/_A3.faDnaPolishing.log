@@ -1,0 +1,23 @@
+
+
+========== Start at 2016年 11月 30日 星期三 17:23:31 CST
+../bin/faDnaPolishing.pl --legalizing --noLeadingN --removeShortSeq=200
+
+
+--legalizing=1 .
+--maskShortPortion=0 .
+--noLeadingN=1 .
+--removeShortSeq=200 .
+>sc_B: finished.
+>sc_F: finished.
+>sc_C: finished.
+>sc_unpaired_500_2850x2_500: finished.
+>sc_H: finished.
+>sc_D: finished.
+>sc_E: finished.
+>sc_G: finished.
+>sc_A: finished.
+
+
+========== Time used = 0 seconds or 0 hours.
+

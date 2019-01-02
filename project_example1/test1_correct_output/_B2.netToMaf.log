@@ -1,0 +1,33 @@
+
+
+========== Start at 2016年 11月 30日 星期三 17:27:43 CST
+../bin/HM_netToAxtMaf.pl --Species genome genomex --Force --netFile=mafFiltered.net.gz --chainFile=all.rbest.chain.gz
+
+Set to OVER-WRITING mode!
+Species included:  genome genomex 
+=== netToMaf start ===
+Checking the following two files ...
+genome.genomex.result/all.rbest.chain.gz
+genome.genomex.result/mafFiltered.net
+Checking missing sizes files ...
+checking nib files in genome.seq/ ...
+checking nib files in genomex.seq/ ...
+checking net.maf/axt file genome.genomex.result/mafFiltered.net.maf.gz and genome.genomex.result/mafFiltered.net.axt.gz ...
+gunzip -c genome.genomex.result/all.rbest.chain.gz | netToAxt -maxGap=300 genome.genomex.result/mafFiltered.net /dev/stdin genome.seq genomex.seq /dev/stdout | axtSort /dev/stdin /dev/stdout | axtToMaf -tPrefix=genome. -qPrefix=genomex. /dev/stdin genome.sizes genomex.sizes /dev/stdout| gzip -c > genome.genomex.result/mafFiltered.net.maf.gz 
+=== netToMaf done! ===
+
+
+
+========== Time used =  0  seconds or  0  hours.
+
+c_D
+Processing sc_E
+Processing sc_G
+Processing sc_A
+========== Start at 2016年 11月 30日 星期三 17:27:43 CST
+
+
+../bin/mafSplitByTarget.pl genome.genomex.result/mafFiltered.net.maf.gz
+
+========== Time used =  0  seconds or  0  hours.
+

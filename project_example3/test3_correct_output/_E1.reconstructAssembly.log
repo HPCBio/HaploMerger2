@@ -1,0 +1,26 @@
+
+
+========== Start at 2016年 11月 30日 星期三 19:27:43 CST
+../bin/GF_extract_filling_ctgs_for_gc1.12.pl --fasta=bbv18wm_A_ref_C_D.gf/bbv18wm_A_ref_C_D.gc.fa --info=bbv18wm_A_ref_C_D.gf/bbv18wm_A_ref_C_D.gc.fa.fill
+
+
+
+========== Time used = 3 seconds or 0.000833333333333333 hours.
+
+
+
+========== Start at 2016年 11月 30日 星期三 19:27:46 CST
+../bin/GF_rebuid_scf_with_gap4fill_and_fctgs.pl --fctgs=bbv18wm_A_ref_C_D.gf/bbv18wm_A_ref_C_D.gc.fa.fill.fctgs --g4f=bbv18wm_A_ref_C_D.gf/bbv18wm_A_ref_C_D.ad.gap4fill --scf=bbv18wm_A_ref_C_D.fa.gz
+
+Finished reading scf.
+A total of 6286 gaps can be finished,
+  with 4922 gaps filled with sequences, 416 with zero length and 948 with negative length.
+Finished reading fctgs.
+Finished reading g4f.
+Finished adjusting g4f.
+finished agp output.
+Finished outputing scaffolds.
+
+
+========== Time used = 95 seconds or 0.0263888888888889 hours.
+

@@ -1,0 +1,12 @@
+# Finished removing of tandem assembly errors.
+
+# The minimum portion length for deletion is set to 2500,
+
+# This table shows the deleted and retained scaffold portions.
+
+# deletion_flag==1 means that the first portion has been deleted.
+# deletion_flag==3 means that the second portion has been deleted.
+# deletion_flag==0 or -2 means that no portion has been deleted.
+
+#sc_id	1st_start	1st_len	2nd_start	2nd_len	interval	1st_Ns	1st_LCs	2nd_Ns	2nd_LCs	deletion_flag
+xfSc0000000	500	2863	3363	2863	0	0	0	0	0	3
